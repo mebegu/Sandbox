@@ -17,13 +17,13 @@ namespace Homework1
         {
             Contract.Invariant(this.sm != null);
             Contract.Invariant(Contract.ForAll(rest, x => x > 99);
-            //Contract.Invariant(); CHECK FOR rest IS SORTED
-            //Contract.Invariant(); CHECK IF max IS CORRECT
+            Contract.Invariant(isListSorted(rest)); 
+            Contract.Invariant(this.max == findMax(sm, rest));
         }
 
         public NatSet()
         {
-            sm = new Boolean[99];
+            sm = new Boolean[100];
             rest = new List<int>();
             max = -1;
         }
@@ -38,12 +38,13 @@ namespace Homework1
         }
 
 
-        //Set max
         public void insert(int k)
         {
             Contract.Requires(k != null);
+            Contract.Requires(k >= 0);
             Contract.Ensures(sm[k] || rest.Contains(k));
 
+            
             if (k < 100)
             {
                 sm[k] = true;
@@ -56,6 +57,8 @@ namespace Homework1
                 rest.Sort();
             }
 
+            if (k > max) max = k;
+
         }
 
 
@@ -64,6 +67,7 @@ namespace Homework1
         public void remove(int k)
         {
             Contract.Requires(k != null);
+            Contract.Requires(k >= 0);
             Contract.Ensures(!sm[k] && !rest.Contains(k));
 
             if (k < 100)
@@ -78,16 +82,40 @@ namespace Homework1
 
                 rest.Remove(k);
             }
+
+            max = findMax(sm, rest);
         }
 
         public void union(NatSet other)
         {
-
+            
         }
 
         public void intersect(NatSet other)
         {
 
+        }
+
+        private Boolean isListSorted(List<int> lst)
+        {
+            for (int i = 0; i < lst.Capacity-1; i++)
+            {
+                if (lst.ElementAt(i) > lst.ElementAt(i + 1)) return false;
+            }
+
+            return true;
+        }
+
+        private int findMax(bool[] array, List<int> lst)
+        {
+            if (lst.Capacity != 0) return lst.ElementAt(lst.Capacity-1);
+
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                if (array[i]) return i;
+            }
+
+            return -1;
         }
 
     }
