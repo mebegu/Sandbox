@@ -1,0 +1,45 @@
+﻿<frameTree version="0.94.51006.1"><frameException type="System.Diagnostics.Contracts.__ContractsRuntime+ContractException"><tag exceptionState="unexpected"><generatedTestRef idref="6d1f3c3b-5eec-44a3-8867-6237de6fe503"/>
+</tag>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(71)" method="NatSet.remove(Int32)" offset="0" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="71"><method assemblyName="NatSet" name="remove" token="6000004"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedException(typeof(ElementNotFoundException))]
+        public void remove(int k)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(k >= 0);]]></source>
+<afterSource><![CDATA[            Contract.Ensures(!sm[k] && !rest.Contains(k));
+
+            if (k < 100)]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="6d1f3c3b-5eec-44a3-8867-6237de6fe503"/>
+</tag>
+</frameNode>
+</frameException>
+<frameException type="NatSet.ElementNotFoundException"><tag exceptionState="expected"><generatedTestRef idref="c3936da7-1355-416e-ae20-3b938cd2f5b6"/>
+</tag>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(82)" method="NatSet.remove(Int32)" offset="152" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="82"><method assemblyName="NatSet" name="remove" token="6000004"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[            }
+            else
+            {]]></beforeSource>
+<source><![CDATA[                if (!rest.Contains(k)) throw new ElementNotFoundException();]]></source>
+<afterSource><![CDATA[
+                rest.Remove(k);
+            }]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="c3936da7-1355-416e-ae20-3b938cd2f5b6"/>
+</tag>
+</frameNode>
+</frameException>
+</frameTree>

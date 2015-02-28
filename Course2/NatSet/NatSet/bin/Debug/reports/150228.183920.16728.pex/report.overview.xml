@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?><pex id="{6c788332-3348-4443-814a-1290afeeddad}" creationTime="2015-02-28 16:39:20Z" configuration="NatSet!\NatSet!\remove!" created="2015-02-28 16:39:20Z" pexVersion="0.94.51006.1" xml="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\bin\Debug\reports\150228.183920.16728.pex\report.per" html="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\bin\Debug\reports\150228.183920.16728.pex\report.html"><environment commandLine="&quot;C:\Program Files (x86)\Microsoft Pex\bin\Microsoft.Pex.x86.exe&quot; C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\bin\Debug\NatSet.dll /targetx86 /clrversion:v4.0.30319 /donotopenreport /reportlevel:Xml /reportrootpath:C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\bin\Debug\reports /testframework:VisualStudioUnitTest /testlanguage:cs /testprojectfile:C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.csproj /testprojectnotupdate /testprojectskip" machineName="GÜRÇAY" osVersion="Microsoft Windows NT 6.2.9200.0" processorCount="4" clrVersion="4.0.30319.34014" bitness="x86" user="MehmetBerk"><envVars><envVar name="HOMEPATH" value="\Users\MehmetBerk"/>
+<envVar name="COMPUTERNAME" value="GÜRÇAY"/>
+<envVar name="CLRMONITOR_INJECT_TYPES" value=""/>
+<envVar name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+<envVar name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel"/>
+<envVar name="SESSIONNAME" value="Console"/>
+<envVar name="TMP" value="C:\Users\MEHMET~1\AppData\Local\Temp"/>
+<envVar name="PROCESSOR_REVISION" value="3a09"/>
+<envVar name="CLRMONITOR_INSTRUMENT_TYPES_EXCLUSIONS" value=""/>
+<envVar name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+<envVar name="VS100COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\"/>
+<envVar name="COMPLUS_DEFAULTVERSION" value="v4.0.30319"/>
+<envVar name="CLRMONITOR_CLSID" value="{21bbb412-71ac-41f9-a377-48529a4859cf}"/>
+<envVar name="SystemDrive" value="C:"/>
+<envVar name="PROCESSOR_LEVEL" value="6"/>
+<envVar name="TEMP" value="C:\Users\MEHMET~1\AppData\Local\Temp"/>
+<envVar name="LOCALAPPDATA" value="C:\Users\MehmetBerk\AppData\Local"/>
+<envVar name="pex_wait_for_server_channel" value="1"/>
+<envVar name="CLRMONITOR_PROTECT_ALL_CCTORS" value="1"/>
+<envVar name="CLRMONITOR_PROTECT_TYPES" value="Microsoft.FSharp.Text.Printf,Microsoft.FSharp.Text.PrintfImpl"/>
+<envVar name="PSModulePath" value="C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\"/>
+<envVar name="VSPID" value="5088"/>
+<envVar name="CLRMONITOR_INITIALIZED" value="0xc"/>
+<envVar name="USERDOMAIN" value="GÜRÇAY"/>
+<envVar name="ComSpec" value="C:\WINDOWS\system32\cmd.exe"/>
+<envVar name="CLRMONITOR_ERASE_FINALIZER_TYPES" value=""/>
+<envVar name="CLRMONITOR_INJECT_NAMESPACES" value=""/>
+<envVar name="NUMBER_OF_PROCESSORS" value="4"/>
+<envVar name="CommonProgramFiles" value="C:\Program Files (x86)\Common Files"/>
+<envVar name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+<envVar name="PUBLIC" value="C:\Users\Public"/>
+<envVar name="CLRMONITOR_INSTRUMENT_NAMESPACES_EXCLUSIONS" value=""/>
+<envVar name="CLRMONITOR_FLAGS" value=""/>
+<envVar name="VisualStudioDir" value="C:\Users\MehmetBerk\Documents\Visual Studio 2010"/>
+<envVar name="pex_instrumentation" value="1"/>
+<envVar name="CLRMONITOR_INSTRUMENT_TYPES" value="System.Array,System.Array+ArrayEnumerator,System.Array+FunctorComparer`1,System.Array+SZArrayEnumerator,System.Array+SorterGenericArray,System.Array+SorterObjectArray,System.Boolean,System.Byte,System.Char,System.CharEnumerator,System.ComponentModel.Component,System.ComponentModel.Container,System.ComponentModel.Container+Site,System.Convert,System.Currency,System.DateTime,System.Decimal,System.Diagnostics.Assert,System.Double,System.Globalization.CharUnicodeInfo,System.Globalization.CultureTableRecord,System.Globalization.TextInfo,System.Guid,System.IO.MemoryStream,System.IO.Stream,System.IO.StreamReader,System.IO.StreamWriter,System.IO.StringReader,System.IO.StringWriter,System.Int16,System.Int32,System.Int64,System.Lazy`1,System.Lazy`1+Boxed,System.Lazy`1+LazyInternalExceptionHolder,System.Math,System.Nullable,System.Nullable`1,System.OrdinalComparer,System.SByte,System.SZArrayHelper,System.SZArrayHelper+SZGenericArrayEnumerator`1,System.Single,System.String,System.StringComparer,System.Text.ASCIIEncoding,System.Text.DecoderNLS,System.Text.Encoding,System.Text.UTF8Encoding,System.TimeSpan,System.Tuple,System.Tuple`1,System.Tuple`2,System.Tuple`3,System.Tuple`4,System.Tuple`5,System.Tuple`6,System.Tuple`7,System.Tuple`8,System.UInt16,System.UInt32,System.UInt64,System.Xml.XmlTextWriter,System.Xml.XmlTextWriter+Namespace,System.Xml.XmlTextWriter+NamespaceState,System.Xml.XmlTextWriter+SpecialAttr,System.Xml.XmlTextWriter+State,System.Xml.XmlTextWriter+TagInfo,System.Xml.XmlTextWriter+Token,System.Xml.XmlWriter,System.Xml.XmlWriter+&lt;WriteAttributeStringAsyncHelper&gt;d__0,System.Xml.XmlWriter+&lt;WriteAttributesAsync&gt;d__7,System.Xml.XmlWriter+&lt;WriteElementStringAsync&gt;d__20,System.Xml.XmlWriter+&lt;WriteLocalNamespacesAsync&gt;d__23,System.Xml.XmlWriter+&lt;WriteNodeAsync&gt;d__19,System.Xml.XmlWriter+&lt;WriteNodeAsync_CallAsyncReader&gt;d__10,System.Xml.XmlWriter+&lt;WriteNodeAsync_CallSyncReader&gt;d__a,System.Xml.XmlWriter+&lt;WriteQualifiedNameAsync&gt;d__3,__Box`1,__SzArrayHelper`1"/>
+<envVar name="ProgramData" value="C:\ProgramData"/>
+<envVar name="ProgramW6432" value="C:\Program Files"/>
+<envVar name="ProgramFiles" value="C:\Program Files (x86)"/>
+<envVar name="CLRMONITOR_ERASE_CCTOR_TYPES" value=""/>
+<envVar name="FP_NO_HOST_CHECK" value="NO"/>
+<envVar name="pex_clientid" value="pex5088_1"/>
+<envVar name="windir" value="C:\WINDOWS"/>
+<envVar name="SystemRoot" value="C:\WINDOWS"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ATTRIBUTE" value="Microsoft.Moles.Framework.Moles.MolesInstrumentAttribute"/>
+<envVar name="COMPLUS_ProfAPI_ProfilerCompatibilitySetting" value="EnableV2Profiler"/>
+<envVar name="pex_server_channel" value="pex5088"/>
+<envVar name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+<envVar name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
+<envVar name="LOGONSERVER" value="\\MicrosoftAccount"/>
+<envVar name="USERPROFILE" value="C:\Users\MehmetBerk"/>
+<envVar name="CLRMONITOR_SUBSTITUTIONS" value="C:\WINDOWS\assembly\GAC_MSIL\Microsoft.ExtendedReflection\0.94.0.0__31bf3856ad364e35\Microsoft.ExtendedReflection.dll"/>
+<envVar name="USERDOMAIN_ROAMINGPROFILE" value="GÜRÇAY"/>
+<envVar name="APPDATA" value="C:\Users\MehmetBerk\AppData\Roaming"/>
+<envVar name="HOMEDRIVE" value="C:"/>
+<envVar name="CLRMONITOR_INJECT_ASSEMBLIES" value=""/>
+<envVar name="CodeContractsInstallDir" value="C:\Program Files (x86)\Microsoft\Contracts\"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ASSEMBLIES" value="FSharp.Core,FSharp.PowerPack,Microsoft.Contracts,Microsoft.VisualBasic,Microsoft.VisualStudio.QualityTools.UnitTestFramework,NatSet,System,System.Core,System.Web"/>
+<envVar name="USERNAME" value="MehmetBerk"/>
+<envVar name="COR_PROFILER" value="{21bbb412-71ac-41f9-a377-48529a4859cf}"/>
+<envVar name="PROCESSOR_ARCHITECTURE" value="x86"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ASSEMBLIES_EXCLUSIONS" value=""/>
+<envVar name="OS" value="Windows_NT"/>
+<envVar name="CLRMONITOR_INSTRUMENT_NAMESPACES" value="System.Collections,System.Collections.Generic,System.Collections.ObjectModel,System.Collections.Specialized,System.Diagnostics.Contracts"/>
+<envVar name="Path" value="C:\ProgramData\Oracle\Java\javapath;c:\Program Files (x86)\AMD APP\bin\x86_64;c:\Program Files (x86)\AMD APP\bin\x86;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Windows Live\Shared;C:\Users\MehmetBerk\Desktop\eclipse_koc\eclipse\jdk1.6.0_25\jdk1.6.0_25\bin;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\"/>
+<envVar name="AMDAPPSDKROOT" value="c:\Program Files (x86)\AMD APP\"/>
+<envVar name="ALLUSERSPROFILE" value="C:\ProgramData"/>
+</envVars>
+</environment>
+<settings/>
+<reflection/>
+<assembly name="NatSet" version="1.0.0.0" fileVersion="1.0.0.0" fullName="NatSet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" location="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\bin\Debug\NatSet.dll" fileName="NatSet.dll"><settings testFramework="VisualStudioUnitTest" testLanguage="cs"/>
+<fixture name="NatSet" type="NatSet.NatSet" typeName="NatSet" token="2000002" href="fix\NatSet.628.html"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+<exploration shortName="remove(Int32)" fullName="NatSet.NatSet.remove(Int32)"><log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<log level="message" time="2015-02-28 16:39:20Z" category="symbols" message="could not load symbols for C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualBasic\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll"/>
+<log level="message" time="2015-02-28 16:39:20Z" category="symbols" message="search path: ;"/>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<generatedTest id="79cfefc6-a3cd-4e3b-b2f3-fcad09347485" index="1" run="1" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="remove19103"/>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:20Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:21Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<generatedTest id="6d1f3c3b-5eec-44a3-8867-6237de6fe503" index="2" run="2" exceptionState="unexpected" status="exception" failed="true" failureText="Exception not validated by PexAllowedException(typeof(ElementNotFoundException))." generated="true" new="true" assemblyName="NatSet" name="removeThrowsContractException268"/>
+<log level="error" time="2015-02-28 16:39:21Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to open"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<log level="error" time="2015-02-28 16:39:21Z" wikiTopic="Missing Wiki Topic" category="execution" message="runtime context Microsoft.Pex.Engine.Libraries.MicrosoftVisualBasicLibrary+ProjectErrorRuntimeContextAttribute+Context failed to rollback"><exceptionChain><exception typeDisplayName="InvalidProgramException" source="Microsoft.VisualBasic"><message><![CDATA[Common Language Runtime geçersiz bir program algıladı.]]></message>
+<type spec="Class"><definition assemblyName="mscorlib" name="InvalidProgramException" token="20000fc" namespace="System"/>
+</type>
+<stackTrace><frame value="  at ProjectData..ctor()" method="ProjectData..ctor()" offset="-1"/>
+<frame value="  at ProjectData.GetProjectData()" method="ProjectData.GetProjectData()" offset="0"/>
+<frame value="  at Information.Err()" method="Information.Err()" offset="0"/>
+<frame value="  at ProjectData.ClearProjectError()" method="ProjectData.ClearProjectError()" offset="0"/>
+</stackTrace>
+</exception>
+</exceptionChain>
+</log>
+<generatedTest id="c3936da7-1355-416e-ae20-3b938cd2f5b6" index="3" run="3" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="removeThrowsElementNotFoundException67"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e340\cov.xml" html="cov\e340\cov.html"/>
+<result name="remove(Int32)" state="failed" duration="0,65"/>
+<duration start="2015-02-28 16:39:20Z" end="2015-02-28 16:39:21Z" seconds="0,67"/>
+</exploration>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\t628\cov.xml" html="cov\t628\cov.html"/>
+<duration start="2015-02-28 16:39:20Z" end="2015-02-28 16:39:21Z" seconds="0,70"/>
+</fixture>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\a58249422\cov.xml" html="cov\a58249422\cov.html"/>
+<duration start="2015-02-28 16:39:20Z" end="2015-02-28 16:39:21Z" seconds="0,81"/>
+<frameTreeRef exceptionCount="2"/>
+</assembly>
+<duration start="2015-02-28 16:39:20Z" end="2015-02-28 16:39:21Z" seconds="0,93"/>
+<background/>
+</pex>

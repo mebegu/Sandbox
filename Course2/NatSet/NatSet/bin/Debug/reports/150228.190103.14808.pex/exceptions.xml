@@ -1,0 +1,234 @@
+﻿<frameTree version="0.94.51006.1"><frameException type="System.Diagnostics.Contracts.__ContractsRuntime+ContractException"><tag exceptionState="unexpected"><generatedTestRef idref="83808ce2-ad77-42ab-8a88-49ae98e7a14e"/>
+</tag>
+<frameNode><frame value="  at NatSet.findMax(Boolean[], List`1&lt;Int32&gt;) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(120)" method="NatSet.findMax(Boolean[], List`1&lt;Int32&gt;)" offset="0" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="120"><method assemblyName="NatSet" name="findMax" token="6000008"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="array" position="1"><type spec="SzArray"><elementType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Boolean" token="20000a0" namespace="System"/>
+</elementType>
+</type>
+</parameter>
+<parameter name="lst" position="2"><type spec="Class"><definition assemblyName="mscorlib" name="List`1" token="2000376" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</definition>
+<genericTypeArgument spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</genericTypeArgument>
+</type>
+</parameter>
+<resultType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</resultType>
+</method>
+<beforeSource><![CDATA[        [PexMethod]
+        private int findMax(bool[] array, List<int> lst)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(array != null);]]></source>
+<afterSource><![CDATA[            Contract.Requires(lst != null);
+            
+            ]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="83808ce2-ad77-42ab-8a88-49ae98e7a14e"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.findMax(Boolean[], List`1&lt;Int32&gt;) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(121)" method="NatSet.findMax(Boolean[], List`1&lt;Int32&gt;)" offset="19" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="121"><method assemblyName="NatSet" name="findMax" token="6000008"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="array" position="1"><type spec="SzArray"><elementType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Boolean" token="20000a0" namespace="System"/>
+</elementType>
+</type>
+</parameter>
+<parameter name="lst" position="2"><type spec="Class"><definition assemblyName="mscorlib" name="List`1" token="2000376" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</definition>
+<genericTypeArgument spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</genericTypeArgument>
+</type>
+</parameter>
+<resultType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</resultType>
+</method>
+<beforeSource><![CDATA[        private int findMax(bool[] array, List<int> lst)
+        {
+            Contract.Requires(array != null);]]></beforeSource>
+<source><![CDATA[            Contract.Requires(lst != null);]]></source>
+<afterSource><![CDATA[            
+            
+            if (lst.Capacity != 0) return lst.ElementAt(lst.Capacity - 1);]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="a5b4c215-03ad-451f-919b-fd30d4224c68"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.insert(Int32) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(47)" method="NatSet.insert(Int32)" offset="0" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="47"><method assemblyName="NatSet" name="insert" token="6000003"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexMethod]
+        public void insert(int k)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(k >= 0);]]></source>
+<afterSource><![CDATA[
+            if (k < 100)
+            {]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="943873de-8262-4c43-a81c-68f5093df7fb"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.isListSorted(List`1&lt;Int32&gt;) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(106)" method="NatSet.isListSorted(List`1&lt;Int32&gt;)" offset="0" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="106"><method assemblyName="NatSet" name="isListSorted" token="6000007"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="lst" position="1"><type spec="Class"><definition assemblyName="mscorlib" name="List`1" token="2000376" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</definition>
+<genericTypeArgument spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</genericTypeArgument>
+</type>
+</parameter>
+<resultType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Boolean" token="20000a0" namespace="System"/>
+</resultType>
+</method>
+<beforeSource><![CDATA[        [PexMethod]
+        private Boolean isListSorted(List<int> lst)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(lst != null);]]></source>
+<afterSource><![CDATA[            if (lst.Count() <= 1) return true;
+            for (int i = 0; i < lst.Count() - 1; i++)
+            {]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="557b3c84-683f-469a-a42a-9e5ef5c0377c"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(72)" method="NatSet.remove(Int32)" offset="0" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="72"><method assemblyName="NatSet" name="remove" token="6000004"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedException(typeof(ElementNotFoundException))]
+        public void remove(int k)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(k >= 0);]]></source>
+<afterSource><![CDATA[            Contract.Ensures(!sm[k] && !rest.Contains(k));
+
+            if (k < 100)]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="d1350442-8331-423e-a4a0-09b6f0c626f2"/>
+</tag>
+</frameNode>
+</frameException>
+<frameException type="System.ArgumentOutOfRangeException"><tag exceptionState="unexpected"><generatedTestRef idref="36035532-ea55-4691-a053-bf7b4e3bce67"/>
+</tag>
+<frameNode><frame value="  at ThrowHelper.ThrowArgumentOutOfRangeException()" method="ThrowHelper.ThrowArgumentOutOfRangeException()" offset="24"><method assemblyName="mscorlib" name="ThrowArgumentOutOfRangeException" static="true" token="6000250"><declaringType assemblyName="mscorlib" name="ThrowHelper" token="2000040" namespace="System"/>
+</method>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="36035532-ea55-4691-a053-bf7b4e3bce67"/>
+<generatedTestRef idref="25ab710b-508b-4df1-8a5a-8ebb522f53d9"/>
+</tag>
+<frameNode><frame value="  at List`1.get_Item(Int32)" method="List`1.get_Item(Int32)" offset="9"><method assemblyName="mscorlib" name="get_Item" token="600224c"><declaringType assemblyName="mscorlib" name="List`1" token="2000376" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</declaringType>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="mscorlib" name="List`1" token="2000376" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</definition>
+<genericTypeArgument spec="GenericTypeParameter" index="0"/>
+</type>
+</parameter>
+<parameter name="index" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+<resultType spec="GenericTypeParameter" index="0"/>
+</method>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="36035532-ea55-4691-a053-bf7b4e3bce67"/>
+<generatedTestRef idref="25ab710b-508b-4df1-8a5a-8ebb522f53d9"/>
+</tag>
+<frameNode><frame value="  at Enumerable.ElementAt(IEnumerable`1&lt;!!0&gt;, Int32)" method="Enumerable.ElementAt(IEnumerable`1&lt;!!0&gt;, Int32)" offset="24"><method assemblyName="System.Core" name="ElementAt" static="true" token="6000449"><declaringType assemblyName="System.Core" name="Enumerable" token="200004b" namespace="System.Linq"/>
+<genericParameter value="TSource"/>
+<parameter name="source" position="0"><type spec="Class"><definition assemblyName="mscorlib" name="IEnumerable`1" token="2000037" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</definition>
+<genericTypeArgument spec="GenericMethodParameter" index="0"/>
+</type>
+</parameter>
+<parameter name="index" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+<resultType spec="GenericMethodParameter" index="0"/>
+</method>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="36035532-ea55-4691-a053-bf7b4e3bce67"/>
+<generatedTestRef idref="25ab710b-508b-4df1-8a5a-8ebb522f53d9"/>
+</tag>
+<frameNode><frame value="  at NatSet.findMax(Boolean[], List`1&lt;Int32&gt;) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(124)" method="NatSet.findMax(Boolean[], List`1&lt;Int32&gt;)" offset="62" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="124"><method assemblyName="NatSet" name="findMax" token="6000008"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="array" position="1"><type spec="SzArray"><elementType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Boolean" token="20000a0" namespace="System"/>
+</elementType>
+</type>
+</parameter>
+<parameter name="lst" position="2"><type spec="Class"><definition assemblyName="mscorlib" name="List`1" token="2000376" namespace="System.Collections.Generic"><genericParameter value="T"/>
+</definition>
+<genericTypeArgument spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</genericTypeArgument>
+</type>
+</parameter>
+<resultType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</resultType>
+</method>
+<beforeSource><![CDATA[            Contract.Requires(lst != null);
+            
+            ]]></beforeSource>
+<source><![CDATA[            if (lst.Capacity != 0) return lst.ElementAt(lst.Capacity - 1);]]></source>
+<afterSource><![CDATA[
+            for (int i = array.Length - 1; i >= 0; i--)
+            {]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="36035532-ea55-4691-a053-bf7b4e3bce67"/>
+<generatedTestRef idref="25ab710b-508b-4df1-8a5a-8ebb522f53d9"/>
+</tag>
+<frameNode><frame value="  at NatSet.$InvariantMethod$() in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(24)" method="NatSet.$InvariantMethod$()" offset="146" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="24"><method assemblyName="NatSet" name="$InvariantMethod$" token="6000060"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[            Contract.Invariant(this.sm != null);
+            Contract.Invariant(Contract.ForAll(rest, x => x > 99));
+            Contract.Invariant(isListSorted(rest));]]></beforeSource>
+<source><![CDATA[            Contract.Invariant(this.max == findMax(sm, rest));]]></source>
+<afterSource><![CDATA[        }
+
+        [PexAssumeUnderTest]]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="36035532-ea55-4691-a053-bf7b4e3bce67"/>
+<generatedTestRef idref="25ab710b-508b-4df1-8a5a-8ebb522f53d9"/>
+</tag>
+</frameNode>
+</frameNode>
+</frameNode>
+</frameNode>
+</frameNode>
+</frameException>
+<frameException type="NatSet.ElementNotFoundException"><tag exceptionState="expected"><generatedTestRef idref="95019c46-4000-4dfd-968c-81b485a65cd9"/>
+</tag>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs(83)" method="NatSet.remove(Int32)" offset="152" file="C:\Users\MehmetBerk\Documents\GitHub\Sandbox\Course2\NatSet\NatSet\NatSet.cs" line="83"><method assemblyName="NatSet" name="remove" token="6000004"><declaringType assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000002" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[            }
+            else
+            {]]></beforeSource>
+<source><![CDATA[                if (!rest.Contains(k)) throw new ElementNotFoundException();]]></source>
+<afterSource><![CDATA[
+                rest.Remove(k);
+            }]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="95019c46-4000-4dfd-968c-81b485a65cd9"/>
+</tag>
+</frameNode>
+</frameException>
+</frameTree>
