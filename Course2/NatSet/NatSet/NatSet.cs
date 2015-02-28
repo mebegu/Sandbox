@@ -14,6 +14,7 @@ namespace NatSet
         private Boolean[] sm;
         private List<int> rest;
         private int max;
+        public int length;
 
         [ContractInvariantMethod]
         private void invariant()
@@ -22,6 +23,7 @@ namespace NatSet
             Contract.Invariant(Contract.ForAll(rest, x => x > 99));
             Contract.Invariant(isListSorted(rest));
             Contract.Invariant(this.max == findMax(sm, rest));
+            Contract.Invariant(this.length >= 0);
         }
 
 
@@ -30,6 +32,7 @@ namespace NatSet
             sm = new Boolean[100];
             rest = new List<int>();
             max = -1;
+            length = 0;
         }
 
         public NatSet(int k)
@@ -37,6 +40,7 @@ namespace NatSet
             sm = new Boolean[100];
             rest = new List<int>();
             max = -1;
+            length = 0;
             insert(k);
         }
 
@@ -57,6 +61,7 @@ namespace NatSet
                 rest.Sort();
             }
 
+            length++;
             if (k > max) max = k;
 
         }
@@ -84,6 +89,7 @@ namespace NatSet
                 rest.Remove(k);
             }
 
+            length--;
             max = findMax(sm, rest);
         }
 
@@ -95,6 +101,30 @@ namespace NatSet
         public void intersect(NatSet other)
         {
 
+        }
+        
+        [PexMethod]
+        public int get(int index)
+        {
+            Contract.Requires(index >= 0 && index < length);
+            int count = 0;
+
+            for (int i = 0; i < sm.Length; i++)
+            {
+
+                if (sm[i])
+                {
+                    if (count == index)
+                        return i;
+
+                    count++;
+                }
+            }
+
+
+            index = index - count;
+
+            return rest.ElementAt(index);
         }
 
 
@@ -120,7 +150,7 @@ namespace NatSet
             Contract.Requires(lst != null);
             
             
-            if (lst.Capacity != 0) return lst.ElementAt(lst.Capacity - 1);
+            if (lst.Count != 0) return lst.ElementAt(lst.Count - 1);
 
             for (int i = array.Length - 1; i >= 0; i--)
             {

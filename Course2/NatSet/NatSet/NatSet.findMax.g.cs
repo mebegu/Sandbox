@@ -96,5 +96,161 @@ public void findMax138()
     i = this.findMax(bs, list);
     Assert.AreEqual<int>(-1, i);
 }
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void findMaxThrowsContractException557()
+{
+    int i;
+    i = this.findMax((bool[])null, (List<int>)null);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void findMaxThrowsContractException33()
+{
+    int i;
+    bool[] bs = new bool[0];
+    i = this.findMax(bs, (List<int>)null);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax20001()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[0];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(-1, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax24501()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[1];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(-1, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax61701()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[1];
+    bs[0] = true;
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(0, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax57101()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[1];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[1];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(0, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax13801()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[2];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(-1, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void findMaxThrowsContractException848()
+{
+    int i;
+    i = this.findMax((bool[])null, (List<int>)null);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void findMaxThrowsContractException52()
+{
+    int i;
+    bool[] bs = new bool[0];
+    i = this.findMax(bs, (List<int>)null);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax20002()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[0];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(-1, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax24502()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[1];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(-1, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax61702()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[1];
+    bs[0] = true;
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(0, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax57102()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[1];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[1];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(0, i);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void findMax13802()
+{
+    List<int> list;
+    int i;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    bool[] bs = new bool[2];
+    i = this.findMax(bs, list);
+    Assert.AreEqual<int>(-1, i);
+}
     }
 }

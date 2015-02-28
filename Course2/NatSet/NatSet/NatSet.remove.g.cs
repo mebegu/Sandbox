@@ -37,5 +37,47 @@ public void removeThrowsElementNotFoundException241()
 {
     this.remove(100);
 }
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void removeThrowsContractException177()
+{
+    this.remove(0);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void removeThrowsContractException590()
+{
+    this.remove(int.MinValue);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[ExpectedException(typeof(ElementNotFoundException))]
+public void removeThrowsElementNotFoundException161()
+{
+    this.remove(100);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void removeThrowsContractException120()
+{
+    this.remove(0);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void removeThrowsContractException574()
+{
+    this.remove(int.MinValue);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[ExpectedException(typeof(ElementNotFoundException))]
+public void removeThrowsElementNotFoundException86()
+{
+    this.remove(100);
+}
     }
 }

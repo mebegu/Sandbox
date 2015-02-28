@@ -45,5 +45,60 @@ public void insertThrowsArgumentOutOfRangeException820()
 {
     this.insert(13);
 }
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void insert19101()
+{
+    this.insert(0);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void insertThrowsContractException747()
+{
+    this.insert(int.MinValue);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedException(typeof(ArgumentOutOfRangeException))]
+public void insertThrowsArgumentOutOfRangeException784()
+{
+    this.insert(100);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[Ignore]
+[PexDescription("the test state was: duplicate path")]
+public void insertThrowsArgumentOutOfRangeException422()
+{
+    this.insert(13);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void insert19102()
+{
+    this.insert(0);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void insertThrowsContractException713()
+{
+    this.insert(int.MinValue);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void insert265()
+{
+    this.insert(100);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[Ignore]
+[PexDescription("the test state was: duplicate path")]
+public void insert177()
+{
+    this.insert(13);
+}
     }
 }

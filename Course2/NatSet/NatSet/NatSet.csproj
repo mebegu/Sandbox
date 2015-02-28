@@ -92,6 +92,9 @@
     <Compile Include="NatSet.findMax.g.cs">
       <DependentUpon>NatSet.cs</DependentUpon>
     </Compile>
+    <Compile Include="NatSet.get.g.cs">
+      <DependentUpon>NatSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="NatSet.insert.g.cs">
       <DependentUpon>NatSet.cs</DependentUpon>
     </Compile>

@@ -82,5 +82,133 @@ public void isListSorted730()
     b = this.isListSorted(list);
     Assert.AreEqual<bool>(true, b);
 }
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void isListSortedThrowsContractException188()
+{
+    bool b;
+    b = this.isListSorted((List<int>)null);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted35001()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted4401()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[1];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted11901()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[2];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted31001()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[2];
+    ints[0] = 1;
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(false, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted73001()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[3];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+[PexRaisedContractException]
+public void isListSortedThrowsContractException265()
+{
+    bool b;
+    b = this.isListSorted((List<int>)null);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted35002()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[0];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted4402()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[1];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted11902()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[2];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted31002()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[2];
+    ints[0] = 1;
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(false, b);
+}
+[TestMethod]
+[PexGeneratedBy(typeof(global::NatSet.NatSet))]
+public void isListSorted73002()
+{
+    List<int> list;
+    bool b;
+    int[] ints = new int[3];
+    list = new List<int>((IEnumerable<int>)ints);
+    b = this.isListSorted(list);
+    Assert.AreEqual<bool>(true, b);
+}
     }
 }
