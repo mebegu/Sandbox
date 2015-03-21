@@ -1,0 +1,4 @@
+* * 9 
+
+
+The exit found at coordinate: (0,2)
