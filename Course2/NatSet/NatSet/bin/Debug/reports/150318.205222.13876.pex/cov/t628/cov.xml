@@ -1,0 +1,796 @@
+﻿<documents created="2015-03-18 18:52:30Z"><document src="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" renderPrefix="s0"><chunk hits="-1" domain="unknown"><source><![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Pex.Framework;
+using System.Diagnostics.Contracts;
+using Microsoft.Pex.Framework.Validation;
+using Microsoft.Pex.Framework.Explorable;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.Pex.Framework.Generated;
+using Microsoft.Pex.Framework.Exceptions;
+
+namespace NatSet
+{
+    [PexClass]
+    public partial class NatSet
+    {
+        private Boolean[] sm;
+        private List<int> rest;
+        private int max;
+
+        [ContractInvariantMethod]
+        private void invariant()
+        ]]></source>
+</chunk>
+<method name="$InvariantMethod$" namespace="NatSet" type="NatSet.NatSet" typeName="NatSet" token="60000c4" module="NatSet.dll"><hits><hit index="0" value="2"/>
+<hit index="1" value="2"/>
+<hit index="2" value="2"/>
+<hit index="3" value="2"/>
+<hit index="4" value="2"/>
+<hit index="5" value="2"/>
+<hit index="6" value="2"/>
+<hit index="7" value="2"/>
+<hit index="8" value="2"/>
+<hit index="9" value="2"/>
+<hit index="10" value="2"/>
+<hit index="11" value="2"/>
+<hit index="12" value="2"/>
+<hit index="13" value="2"/>
+<hit index="14" value="2"/>
+<hit index="15" value="2"/>
+<hit index="16" value="1"/>
+<hit index="17" value="1"/>
+<hit index="19" value="1"/>
+<hit index="20" value="2"/>
+<hit index="21" value="2"/>
+<hit index="22" value="2"/>
+<hit index="23" value="2"/>
+<hit index="24" value="2"/>
+<hit index="25" value="2"/>
+<hit index="26" value="2"/>
+<hit index="27" value="2"/>
+<hit index="28" value="4"/>
+<hit index="30" value="2"/>
+<hit index="31" value="2"/>
+<hit index="32" value="2"/>
+<hit index="33" value="2"/>
+<hit index="34" value="4"/>
+<hit index="35" value="2"/>
+<hit index="37" value="2"/>
+<hit index="38" value="2"/>
+<hit index="39" value="2"/>
+<hit index="40" value="2"/>
+<hit index="41" value="2"/>
+<hit index="42" value="2"/>
+<hit index="43" value="2"/>
+<hit index="44" value="2"/>
+<hit index="45" value="2"/>
+<hit index="46" value="2"/>
+<hit index="47" value="1"/>
+<hit index="48" value="2"/>
+<hit index="52" value="2"/>
+<hit index="53" value="2"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="19" total="20" coveredRatio="0.95"/>
+</method>
+<chunk hits="2" offset="0000" domain="userortestcode"><source><![CDATA[{]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="4" offset="0013" domain="userortestcode"><source><![CDATA[Contract.Invariant(this.sm != null);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="002b" domain="userortestcode"><source><![CDATA[Contract.Invariant(this.sm.Length == 100);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="0043" domain="userortestcode"><source><![CDATA[Contract.Invariant(this.rest != null);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="005b" domain="userortestcode"><source><![CDATA[Contract.Invariant(Contract.ForAll(this.rest, x => ]]></source>
+</chunk>
+<method name="&lt;invariant&gt;b__0" namespace="NatSet" type="NatSet.NatSet" typeName="NatSet" token="60000be" module="NatSet.dll"><hits><hit index="0" value="22"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="1" total="1" coveredRatio="1"/>
+</method>
+<chunk hits="22" offset="0000" domain="userortestcode"><source><![CDATA[x > 99]]></source>
+</chunk>
+<chunk hits="2" offset="005b" domain="userortestcode"><source><![CDATA[));]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="0097" domain="userortestcode"><source><![CDATA[Contract.Invariant(this.rest.Count > 1 ? Contract.ForAll(1, this.rest.Count, i => ]]></source>
+</chunk>
+<method name="&lt;invariant&gt;b__1" namespace="NatSet" type="NatSet.NatSet" typeName="NatSet" token="60000bf" module="NatSet.dll"><hits><hit index="0" value="20"/>
+<hit index="1" value="20"/>
+<hit index="2" value="20"/>
+<hit index="3" value="20"/>
+<hit index="4" value="20"/>
+<hit index="5" value="20"/>
+<hit index="6" value="20"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="3" total="3" coveredRatio="1"/>
+</method>
+<chunk hits="20" offset="0000" domain="userortestcode"><source><![CDATA[(this.rest.ElementAt(i) >= this.rest.ElementAt(i-1))]]></source>
+</chunk>
+<chunk hits="2" offset="0097" domain="userortestcode"><source><![CDATA[ ) : true);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="00d7" domain="userortestcode"><source><![CDATA[Contract.Invariant(max == findMax());]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+        }
+
+
+        public NatSet()
+        {
+            sm = new Boolean[100];
+            rest = new List<int>();
+            max = -1;
+        }
+
+        public NatSet(int k)
+        {
+            sm = new Boolean[100];
+            rest = new List<int>();
+            max = -1;
+            insert(k);
+        }
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        public void insert(int k)
+        ]]></source>
+</chunk>
+<chunk hits="4" offset="005b" domain="userortestcode"><source><![CDATA[{]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<method name="insert" namespace="NatSet" type="NatSet.NatSet" typeName="NatSet" token="6000004" module="NatSet.dll"><hits><hit index="0" value="2"/>
+<hit index="1" value="2"/>
+<hit index="2" value="2"/>
+<hit index="3" value="2"/>
+<hit index="4" value="2"/>
+<hit index="5" value="2"/>
+<hit index="18" value="1"/>
+<hit index="19" value="1"/>
+<hit index="20" value="1"/>
+<hit index="21" value="1"/>
+<hit index="22" value="1"/>
+<hit index="23" value="1"/>
+<hit index="24" value="1"/>
+<hit index="25" value="1"/>
+<hit index="26" value="1"/>
+<hit index="27" value="2"/>
+<hit index="28" value="1"/>
+<hit index="29" value="1"/>
+<hit index="30" value="1"/>
+<hit index="31" value="1"/>
+<hit index="32" value="1"/>
+<hit index="33" value="2"/>
+<hit index="34" value="1"/>
+<hit index="35" value="1"/>
+<hit index="36" value="1"/>
+<hit index="37" value="1"/>
+<hit index="38" value="2"/>
+<hit index="39" value="2"/>
+<hit index="43" value="2"/>
+<hit index="44" value="1"/>
+<hit index="45" value="1"/>
+<hit index="46" value="1"/>
+<hit index="47" value="1"/>
+<hit index="48" value="1"/>
+<hit index="49" value="2"/>
+<hit index="50" value="1"/>
+<hit index="51" value="1"/>
+<hit index="52" value="1"/>
+<hit index="53" value="2"/>
+<hit index="54" value="2"/>
+<hit index="55" value="2"/>
+<hit index="56" value="2"/>
+<hit index="57" value="2"/>
+<hit index="58" value="2"/>
+<hit index="59" value="2"/>
+<hit index="60" value="1"/>
+<hit index="65" value="2"/>
+<hit index="66" value="2"/>
+<hit index="67" value="2"/>
+<hit index="68" value="2"/>
+<hit index="69" value="2"/>
+<hit index="70" value="4"/>
+<hit index="71" value="1"/>
+<hit index="72" value="1"/>
+<hit index="73" value="2"/>
+<hit index="77" value="1"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="19" total="29" coveredRatio="0.65517241379310343"/>
+</method>
+<chunk hits="2" offset="0000" domain="userortestcode"><source><![CDATA[Contract.Requires(k >= 0);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="00e7" domain="userortestcode"><source><![CDATA[Contract.Ensures(k<100 ? sm[k] : rest.Contains(k));]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="0113" domain="userortestcode"><source><![CDATA[Contract.Ensures(max == findMax());]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+            ]]></source>
+</chunk>
+<chunk hits="4" offset="005c" domain="userortestcode"><source><![CDATA[if (k < 100)]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="006b" domain="userortestcode"><source><![CDATA[{]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+                ]]></source>
+</chunk>
+<chunk hits="1" offset="006c" domain="userortestcode"><source><![CDATA[sm[k] = true;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="3" offset="0075" domain="userortestcode"><source><![CDATA[}]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            else
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="007b" domain="userortestcode"><source><![CDATA[{]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+                ]]></source>
+</chunk>
+<chunk hits="1" offset="007c" domain="userortestcode"><source><![CDATA[if (rest.Contains(k))]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[ ]]></source>
+</chunk>
+<chunk hits="1" offset="0092" domain="userortestcode"><source><![CDATA[return;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+                ]]></source>
+</chunk>
+<chunk hits="1" offset="0097" domain="userortestcode"><source><![CDATA[rest.Add(k);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+                ]]></source>
+</chunk>
+<chunk hits="3" offset="00a4" domain="userortestcode"><source><![CDATA[rest.Sort();]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="3" offset="00b0" domain="userortestcode"><source><![CDATA[}]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+            ]]></source>
+</chunk>
+<chunk hits="6" offset="00b1" domain="userortestcode"><source><![CDATA[if (k > max)]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[ ]]></source>
+</chunk>
+<chunk hits="0" offset="00c4" domain="userortestcode"><source><![CDATA[max = k;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+        ]]></source>
+</chunk>
+<chunk hits="3" offset="00cb" domain="userortestcode"><source><![CDATA[}]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+        [PexMethod]
+        [PexAllowedException(typeof(ElementNotFoundException))]
+        [PexAllowedContractRequiresFailure]
+        public void remove(int k)
+        {
+            Contract.Requires(k >= 0);
+            Contract.Ensures(k < 100 ? !sm[k] : !rest.Contains(k));
+
+            if (k < 100)
+            {
+                if (!sm[k]) throw new ElementNotFoundException();
+
+                sm[k] = false;
+            }
+            else
+            {
+                if (!rest.Contains(k)) throw new ElementNotFoundException();
+
+                rest.Remove(k);
+            }
+
+            max = findMax();
+        }
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        public void union(NatSet other)
+        {
+            Contract.Requires(other != null);
+            Contract.Requires(other != this);
+            Contract.Ensures(Contract.OldValue(other) == other);
+            Contract.Ensures(Contract.ForAll(0, this.sm.Length, 
+                i => this.sm[i] ? (other.sm[i] || Contract.OldValue(this.sm)[i]) : (!other.sm[i] && !(Contract.OldValue(this.sm)[i]))));
+
+            Contract.Ensures(
+                (this.rest.Count > 0) ?
+                Contract.ForAll(0, this.rest.Count,
+                    i => (other.rest.Contains(this.rest.ElementAt(i)) || Contract.OldValue(this.rest).Contains(this.rest.ElementAt(i))))
+                : Contract.OldValue(this.rest).Count == 0 && other.rest.Count == 0);
+
+            for (int i = 0; i < other.sm.Length; i++)
+                if (other.sm[i]) insert(i);
+
+            for (int i = 0; i < other.rest.Count; i++)
+                insert(other.rest.ElementAt(i));
+
+
+        }
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        public void intersect(NatSet other)
+        {
+            Contract.Requires(other != null);
+            Contract.Requires(other != this);
+            Contract.Ensures(Contract.OldValue(other) == other);
+            Contract.Ensures(Contract.ForAll(0, this.sm.Length,
+                i => this.sm[i] ? (other.sm[i] && Contract.OldValue(this.sm)[i]) : (!other.sm[i] || !Contract.OldValue(this.sm)[i])));
+            
+            Contract.Ensures(
+                (this.rest.Count > 0) ?
+                Contract.ForAll(0, this.rest.Count,
+                    i => (other.rest.Contains(this.rest.ElementAt(i)) && Contract.OldValue(this.rest).Contains(this.rest.ElementAt(i)))) 
+                : (Contract.OldValue(rest).Count > 0) ?
+                Contract.ForAll(0, Contract.OldValue(this.rest).Count,
+                i => (!other.rest.Contains(Contract.OldValue(this.rest).ElementAt(i)))) 
+                : true);
+
+            for (int i = 0; (i < this.sm.Length && i < other.sm.Length); i++)
+                if ((other.sm[i] != this.sm[i]) && this.sm[i])
+                    remove(i);
+
+
+            for (int i = 0; i < this.rest.Count; i++)
+                if (!other.rest.Contains(this.rest.ElementAt(i)))
+                    remove(this.rest.ElementAt(i));
+
+        }
+
+        public int getMax()
+        {
+            return max;
+        }
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        private int findMax()
+        ]]></source>
+</chunk>
+<chunk hits="4" offset="0030" domain="userortestcode"><source><![CDATA[{]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<method name="findMax" namespace="NatSet" type="NatSet.NatSet" typeName="NatSet" token="6000009" module="NatSet.dll"><hits><hit index="0" value="4"/>
+<hit index="1" value="4"/>
+<hit index="2" value="4"/>
+<hit index="3" value="4"/>
+<hit index="4" value="4"/>
+<hit index="5" value="4"/>
+<hit index="6" value="4"/>
+<hit index="7" value="4"/>
+<hit index="8" value="4"/>
+<hit index="9" value="4"/>
+<hit index="10" value="4"/>
+<hit index="11" value="8"/>
+<hit index="12" value="4"/>
+<hit index="13" value="4"/>
+<hit index="14" value="4"/>
+<hit index="15" value="4"/>
+<hit index="23" value="4"/>
+<hit index="24" value="4"/>
+<hit index="25" value="4"/>
+<hit index="26" value="4"/>
+<hit index="27" value="4"/>
+<hit index="28" value="8"/>
+<hit index="49" value="4"/>
+<hit index="50" value="4"/>
+<hit index="51" value="4"/>
+<hit index="52" value="4"/>
+<hit index="53" value="4"/>
+<hit index="54" value="4"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="12" total="26" coveredRatio="0.46153846153846156"/>
+</method>
+<chunk hits="4" offset="0000" domain="userortestcode"><source><![CDATA[Contract.Requires(sm != null);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="4" offset="0018" domain="userortestcode"><source><![CDATA[Contract.Requires(rest != null);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="4" offset="00b4" domain="userortestcode"><source><![CDATA[Contract.Ensures(rest.Count > 0 ? Contract.Result<int>() == rest.Max()
+                : Contract.Result<int>() != -1 ? sm[Contract.Result<int>()] && Contract.ForAll(Contract.Result<int>()+1, sm.Length, i => !sm[i]) 
+                : Contract.ForAll(0, sm.Length, i=> !sm[i]));]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+
+            ]]></source>
+</chunk>
+<chunk hits="4" offset="0031" domain="userortestcode"><source><![CDATA[if (rest.Count != 0)]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[ ]]></source>
+</chunk>
+<chunk hits="4" offset="0046" domain="userortestcode"><source><![CDATA[return rest.Max();]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+            for (]]></source>
+</chunk>
+<chunk hits="0" offset="0057" domain="userortestcode"><source><![CDATA[int i = sm.Length - 1;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[ ]]></source>
+</chunk>
+<chunk hits="0" offset="0084" domain="userortestcode"><source><![CDATA[i >= 0]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[; ]]></source>
+</chunk>
+<chunk hits="0" offset="0080" domain="userortestcode"><source><![CDATA[i--]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[)
+                ]]></source>
+</chunk>
+<chunk hits="0" offset="0067" domain="userortestcode"><source><![CDATA[if (sm[i])]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[ ]]></source>
+</chunk>
+<chunk hits="0" offset="0079" domain="userortestcode"><source><![CDATA[return i;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+            ]]></source>
+</chunk>
+<chunk hits="0" offset="008f" domain="userortestcode"><source><![CDATA[return -1;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+        ]]></source>
+</chunk>
+<chunk hits="4" offset="0096" domain="userortestcode"><source><![CDATA[}]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        private void insertTest(int[] values)
+        ]]></source>
+</chunk>
+<method name="insertTest" namespace="NatSet" type="NatSet.NatSet" typeName="NatSet" token="600000a" module="NatSet.dll"><hits><hit index="0" value="1"/>
+<hit index="1" value="1"/>
+<hit index="3" value="1"/>
+<hit index="4" value="1"/>
+<hit index="5" value="1"/>
+<hit index="6" value="1"/>
+<hit index="7" value="1"/>
+<hit index="8" value="1"/>
+<hit index="10" value="1"/>
+<hit index="11" value="1"/>
+<hit index="12" value="1"/>
+<hit index="13" value="1"/>
+<hit index="14" value="1"/>
+<hit index="15" value="1"/>
+<hit index="16" value="1"/>
+<hit index="17" value="1"/>
+<hit index="18" value="1"/>
+<hit index="19" value="1"/>
+<hit index="20" value="1"/>
+<hit index="22" value="1"/>
+<hit index="23" value="1"/>
+<hit index="24" value="1"/>
+<hit index="25" value="1"/>
+<hit index="26" value="1"/>
+<hit index="27" value="1"/>
+<hit index="29" value="1"/>
+<hit index="30" value="1"/>
+<hit index="31" value="1"/>
+<hit index="32" value="1"/>
+<hit index="33" value="1"/>
+<hit index="34" value="1"/>
+<hit index="35" value="1"/>
+<hit index="36" value="2"/>
+<hit index="37" value="1"/>
+<hit index="38" value="1"/>
+<hit index="39" value="1"/>
+<hit index="40" value="1"/>
+<hit index="41" value="2"/>
+<hit index="42" value="2"/>
+<hit index="43" value="2"/>
+<hit index="44" value="2"/>
+<hit index="45" value="2"/>
+<hit index="46" value="3"/>
+<hit index="47" value="3"/>
+<hit index="48" value="1"/>
+<hit index="49" value="1"/>
+<hit index="50" value="1"/>
+<hit index="51" value="1"/>
+<hit index="52" value="1"/>
+<hit index="53" value="1"/>
+<hit index="54" value="1"/>
+<hit index="55" value="1"/>
+<hit index="56" value="1"/>
+<hit index="57" value="1"/>
+<hit index="58" value="1"/>
+<hit index="59" value="1"/>
+<hit index="60" value="1"/>
+<hit index="61" value="2"/>
+<hit index="62" value="1"/>
+<hit index="63" value="1"/>
+<hit index="64" value="1"/>
+<hit index="65" value="1"/>
+<hit index="66" value="1"/>
+<hit index="67" value="1"/>
+<hit index="68" value="1"/>
+<hit index="69" value="1"/>
+<hit index="70" value="1"/>
+<hit index="71" value="1"/>
+<hit index="72" value="1"/>
+<hit index="73" value="1"/>
+<hit index="75" value="1"/>
+<hit index="76" value="1"/>
+<hit index="77" value="1"/>
+<hit index="78" value="1"/>
+<hit index="79" value="1"/>
+<hit index="80" value="1"/>
+<hit index="81" value="1"/>
+<hit index="82" value="1"/>
+<hit index="83" value="1"/>
+<hit index="84" value="1"/>
+<hit index="85" value="1"/>
+<hit index="87" value="1"/>
+<hit index="89" value="2"/>
+<hit index="93" value="1"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="26" total="26" coveredRatio="1"/>
+</method>
+<chunk hits="2" offset="0028" domain="userortestcode"><source><![CDATA[{]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="0110" domain="userortestcode"><source><![CDATA[Contract.Ensures(Contract.ForAll(0,values.Length, i=> ]]></source>
+</chunk>
+<method name="&lt;insertTest&gt;b__e" namespace="NatSet" type="NatSet.NatSet+NatSet_&lt;&gt;c__DisplayClass11_0" typeName="NatSet+NatSet_&lt;&gt;c__DisplayClass11_0" token="60000e6" module="NatSet.dll"><hits><hit index="0" value="2"/>
+<hit index="1" value="2"/>
+<hit index="2" value="2"/>
+<hit index="3" value="2"/>
+<hit index="4" value="1"/>
+<hit index="5" value="1"/>
+<hit index="6" value="1"/>
+<hit index="7" value="1"/>
+<hit index="8" value="1"/>
+<hit index="9" value="1"/>
+<hit index="10" value="1"/>
+<hit index="11" value="1"/>
+<hit index="12" value="1"/>
+<hit index="13" value="2"/>
+<hit index="14" value="1"/>
+<hit index="15" value="1"/>
+<hit index="16" value="1"/>
+<hit index="17" value="1"/>
+<hit index="18" value="1"/>
+<hit index="19" value="1"/>
+<hit index="20" value="1"/>
+<hit index="21" value="1"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="4" total="4" coveredRatio="1"/>
+</method>
+<chunk hits="2" offset="0000" domain="userortestcode"><source><![CDATA[values[i] < 100 ? this.sm[values[i]] : this.rest.Contains(values[i])]]></source>
+</chunk>
+<chunk hits="1" offset="0110" domain="userortestcode"><source><![CDATA[));]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="0135" domain="userortestcode"><source><![CDATA[Contract.Ensures(max == values.Max());]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="2" offset="0029" domain="userortestcode"><source><![CDATA[PexAssume.IsNotNullOrEmpty(values);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            PexAssume.TrueForAny(0, values.Length, i => ]]></source>
+</chunk>
+<method name="&lt;insertTest&gt;b__f" namespace="NatSet" type="NatSet.NatSet+&lt;&gt;c__DisplayClass11" typeName="NatSet+&lt;&gt;c__DisplayClass11" token="60000d8" module="NatSet.dll"><hits><hit index="0" value="2"/>
+<hit index="1" value="2"/>
+<hit index="2" value="2"/>
+<hit index="3" value="2"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="1" total="1" coveredRatio="1"/>
+</method>
+<chunk hits="2" offset="0000" domain="userortestcode"><source><![CDATA[(values[i] > 100)]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[);
+            PexAssume.TrueForAny(0, values.Length, i => ]]></source>
+</chunk>
+<method name="&lt;insertTest&gt;b__10" namespace="NatSet" type="NatSet.NatSet+&lt;&gt;c__DisplayClass11" typeName="NatSet+&lt;&gt;c__DisplayClass11" token="60000d9" module="NatSet.dll"><hits><hit index="0" value="2"/>
+<hit index="1" value="2"/>
+<hit index="2" value="2"/>
+<hit index="3" value="2"/>
+</hits>
+<coverage domain="userortestcode" unit="block" covered="1" total="1" coveredRatio="1"/>
+</method>
+<chunk hits="2" offset="0000" domain="userortestcode"><source><![CDATA[(values[i] < 100)]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[);
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="006b" domain="userortestcode"><source><![CDATA[Console.WriteLine(rest.Count + sm.Length);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            for (]]></source>
+</chunk>
+<chunk hits="1" offset="0085" domain="userortestcode"><source><![CDATA[int i = 0;]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[ ]]></source>
+</chunk>
+<chunk hits="3" offset="009f" domain="userortestcode"><source><![CDATA[i < values.Length]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[; ]]></source>
+</chunk>
+<chunk hits="2" offset="009b" domain="userortestcode"><source><![CDATA[i++]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[)
+                ]]></source>
+</chunk>
+<chunk hits="2" offset="008c" domain="userortestcode"><source><![CDATA[insert(values[i]);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="00ae" domain="userortestcode"><source><![CDATA[Console.WriteLine(max);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="00ba" domain="userortestcode"><source><![CDATA[Console.WriteLine(values.Max());]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="00cb" domain="userortestcode"><source><![CDATA[Console.WriteLine(rest.Count+sm.Length);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+            ]]></source>
+</chunk>
+<chunk hits="1" offset="00e5" domain="userortestcode"><source><![CDATA[Console.WriteLine(values.Length);]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+        ]]></source>
+</chunk>
+<chunk hits="1" offset="00f3" domain="userortestcode"><source><![CDATA[}]]></source>
+</chunk>
+<chunk hits="-1" domain="unknown"><source><![CDATA[
+
+        [PexMethod]
+        [PexAllowedException(typeof(ElementNotFoundException))]
+        [PexAllowedContractRequiresFailure]
+        private void removeTest(int[] values)
+        {
+            Contract.Ensures(Contract.ForAll(0, values.Length, i => values[i] < 100 ? !this.sm[values[i]] : !this.rest.Contains(values[i])));
+            Contract.Ensures(max == -1);
+            PexAssume.IsNotNullOrEmpty(values);
+            PexAssume.TrueForAny(0, values.Length, i => (values[i] > 100));
+            PexAssume.TrueForAny(0, values.Length, i => (values[i] < 100));
+
+            for (int i = 0; i < values.Length; i++)
+                insert(values[i]);
+
+            for (int i = 0; i < values.Length; i++)
+                remove(values[i]);
+
+        }
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        public void unionFixedTest()
+        {
+            NatSet other = new NatSet();
+            insert(20);
+            insert(25);
+            insert(105);
+            insert(120);
+            other.insert(20);
+            other.insert(105);
+            other.insert(115);
+
+            this.union(other);
+        }
+
+        [PexMethod]
+        [PexAllowedContractRequiresFailure]
+        public void intersectFixedTest()
+        {
+            NatSet other = new NatSet();
+            insert(20);
+            insert(25);
+            insert(105);
+            insert(120);
+            other.insert(20);
+            other.insert(105);
+            other.insert(115);
+
+            this.intersect(other);
+
+        }
+
+
+        public class ElementNotFoundException : System.ApplicationException
+        {
+            public ElementNotFoundException() { }
+            public ElementNotFoundException(string message) { }
+            public ElementNotFoundException(string message, System.Exception inner) { }
+
+            // Constructor needed for serialization 
+            // when exception propagates from a remoting server to the client.
+            protected ElementNotFoundException(System.Runtime.Serialization.SerializationInfo info,
+                System.Runtime.Serialization.StreamingContext context) { }
+        }
+
+    }
+}
+]]></source>
+</chunk>
+</document>
+<document src="(no sources available for some parts of NatSet)" missing="true"><method name=".ctor" type="NatSet.NatSet+NatSet_&lt;&gt;c__DisplayClass11_0" token="60000e5" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="2" total="2" coveredRatio="1"/>
+</method>
+<method name=".ctor" type="NatSet.NatSet+&lt;&gt;c__DisplayClass11" token="60000d6" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="2" total="2" coveredRatio="1"/>
+</method>
+<method name="Requires" type="System.Diagnostics.Contracts.__ContractsRuntime" token="60000c8" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="3" total="3" coveredRatio="1"/>
+</method>
+<method name="ReportFailure" type="System.Diagnostics.Contracts.__ContractsRuntime" token="60000c5" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="3" total="4" coveredRatio="0.75"/>
+</method>
+<method name="TriggerFailure" type="System.Diagnostics.Contracts.__ContractsRuntime" token="60000c6" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="2" total="2" coveredRatio="1"/>
+</method>
+<method name=".ctor" type="System.Diagnostics.Contracts.__ContractsRuntime+ContractException" token="60000f1" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="6" total="6" coveredRatio="1"/>
+</method>
+<method name="Ensures" type="System.Diagnostics.Contracts.__ContractsRuntime" token="60000c9" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="3" total="3" coveredRatio="1"/>
+</method>
+<method name="Invariant" type="System.Diagnostics.Contracts.__ContractsRuntime" token="60000c7" module="NatSet.dll"><hits/>
+<coverage domain="userortestcode" unit="block" covered="2" total="3" coveredRatio="0.66666666666666663"/>
+</method>
+</document>
+</documents>

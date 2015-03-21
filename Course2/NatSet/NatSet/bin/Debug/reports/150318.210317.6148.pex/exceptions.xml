@@ -1,0 +1,123 @@
+﻿<frameTree version="0.94.51006.1"><frameException type="System.Diagnostics.Contracts.__ContractsRuntime+ContractException"><tag exceptionState="expected"><generatedTestRef idref="a1a4c3a5-a049-4db3-b654-1da7a10f6e5e"/>
+</tag>
+<frameNode><frame value="  at NatSet.insert(Int32) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(53)" method="NatSet.insert(Int32)" offset="0" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="53"><method assemblyName="NatSet" name="insert" token="6000004"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedContractRequiresFailure]
+        public void insert(int k)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(k >= 0);]]></source>
+<afterSource><![CDATA[            Contract.Ensures(k<100 ? sm[k] : rest.Contains(k));
+            Contract.Ensures(max == findMax());
+]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="a1a4c3a5-a049-4db3-b654-1da7a10f6e5e"/>
+<generatedTestRef idref="b32c4e6e-6984-406b-b7a6-747e40374b66"/>
+<generatedTestRef idref="8b4ddd6b-92b5-4005-8040-6393b1489598"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.intersect(NatSet) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(127)" method="NatSet.intersect(NatSet)" offset="30" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="127"><method assemblyName="NatSet" name="intersect" token="6000007"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="other" position="1"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedContractRequiresFailure]
+        public void intersect(NatSet other)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(other != null);]]></source>
+<afterSource><![CDATA[            Contract.Requires(other != this);
+            Contract.Ensures(Contract.OldValue(other) == other);
+            Contract.Ensures(Contract.ForAll(0, this.sm.Length,]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="b29bc017-35e4-4021-8c5d-b062d4c4ff07"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(78)" method="NatSet.remove(Int32)" offset="0" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="78"><method assemblyName="NatSet" name="remove" token="6000005"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedContractRequiresFailure]
+        public void remove(int k)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(k >= 0);]]></source>
+<afterSource><![CDATA[            Contract.Ensures(k < 100 ? !sm[k] : !rest.Contains(k));
+            Contract.Ensures(max == findMax());
+]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="4477a09a-cc8c-410e-8d40-723c81f8fae0"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.union(NatSet) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(102)" method="NatSet.union(NatSet)" offset="30" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="102"><method assemblyName="NatSet" name="union" token="6000006"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="other" position="1"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedContractRequiresFailure]
+        public void union(NatSet other)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(other != null);]]></source>
+<afterSource><![CDATA[            Contract.Requires(other != this);
+            Contract.Ensures(Contract.OldValue(other) == other);
+            Contract.Ensures(Contract.ForAll(0, this.sm.Length, ]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="66479a87-e0f6-43f9-9ec0-db259c1f3e92"/>
+</tag>
+</frameNode>
+</frameException>
+<frameException type="NatSet.NatSet+ElementNotFoundException"><tag exceptionState="expected"><generatedTestRef idref="06ed873b-f650-4fed-a86d-585e054f5dcb"/>
+</tag>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(84)" method="NatSet.remove(Int32)" offset="128" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="84"><method assemblyName="NatSet" name="remove" token="6000005"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[
+            if (k < 100)
+            {]]></beforeSource>
+<source><![CDATA[                if (!sm[k]) throw new ElementNotFoundException();]]></source>
+<afterSource><![CDATA[
+                sm[k] = false;
+            }]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="06ed873b-f650-4fed-a86d-585e054f5dcb"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.remove(Int32) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(90)" method="NatSet.remove(Int32)" offset="169" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="90"><method assemblyName="NatSet" name="remove" token="6000005"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[            }
+            else
+            {]]></beforeSource>
+<source><![CDATA[                if (!rest.Contains(k)) throw new ElementNotFoundException();]]></source>
+<afterSource><![CDATA[
+                rest.Remove(k);
+            }]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="08b90056-2440-4a8c-8360-feb75720be5b"/>
+</tag>
+</frameNode>
+</frameException>
+</frameTree>

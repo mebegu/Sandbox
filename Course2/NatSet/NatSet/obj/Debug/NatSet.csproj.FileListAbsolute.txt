@@ -1,0 +1,11 @@
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\bin\Debug\CodeContracts\NatSet.Contracts.dll
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\bin\Debug\CodeContracts\NatSet.Contracts.pdb
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\bin\Debug\NatSet.dll
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\bin\Debug\NatSet.pdb
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\Decl\NatSet.dll
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\Decl\NatSet.pdb
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\NatSetccrefgen.rsp
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\NatSet.rewritten
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\NatSet.dll
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\NatSet.pdb
+C:\Users\MehmetBerk\Documents\Visual Studio 2010\Projects\NatSet\NatSet\obj\Debug\NatSet.csprojResolveAssemblyReference.cache

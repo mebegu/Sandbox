@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?><pex id="{1d35aed2-73b5-46cf-97ea-42286bf53f2d}" creationTime="2015-03-18 19:03:17Z" configuration="*\*\*" created="2015-03-18 19:03:17Z" pexVersion="0.94.51006.1" xml="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\bin\Debug\reports\150318.210317.6148.pex\report.per" html="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\bin\Debug\reports\150318.210317.6148.pex\report.html"><environment commandLine="&quot;C:\Program Files (x86)\Microsoft Pex\bin\Microsoft.Pex.x86.exe&quot; &quot;C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\bin\Debug\NatSet.dll&quot; /targetx86 /clrversion:v4.0.30319 /donotopenreport /reportlevel:Xml /reportrootpath:&quot;C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\bin\Debug\reports&quot; /testframework:VisualStudioUnitTest /testlanguage:cs /testprojectfile:&quot;C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.csproj&quot; /testprojectnotupdate /testprojectskip" machineName="GÜRÇAY" osVersion="Microsoft Windows NT 6.2.9200.0" processorCount="4" clrVersion="4.0.30319.34014" bitness="x86" user="MehmetBerk"><envVars><envVar name="HOMEPATH" value="\Users\MehmetBerk"/>
+<envVar name="COMPUTERNAME" value="GÜRÇAY"/>
+<envVar name="CLRMONITOR_INJECT_TYPES" value=""/>
+<envVar name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+<envVar name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 58 Stepping 9, GenuineIntel"/>
+<envVar name="SESSIONNAME" value="Console"/>
+<envVar name="TMP" value="C:\Users\MEHMET~1\AppData\Local\Temp"/>
+<envVar name="PROCESSOR_REVISION" value="3a09"/>
+<envVar name="CLRMONITOR_INSTRUMENT_TYPES_EXCLUSIONS" value=""/>
+<envVar name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+<envVar name="VS100COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\Tools\"/>
+<envVar name="COMPLUS_DEFAULTVERSION" value="v4.0.30319"/>
+<envVar name="CLRMONITOR_CLSID" value="{21bbb412-71ac-41f9-a377-48529a4859cf}"/>
+<envVar name="SystemDrive" value="C:"/>
+<envVar name="PROCESSOR_LEVEL" value="6"/>
+<envVar name="TEMP" value="C:\Users\MEHMET~1\AppData\Local\Temp"/>
+<envVar name="LOCALAPPDATA" value="C:\Users\MehmetBerk\AppData\Local"/>
+<envVar name="pex_wait_for_server_channel" value="1"/>
+<envVar name="CLRMONITOR_PROTECT_ALL_CCTORS" value="1"/>
+<envVar name="CLRMONITOR_PROTECT_TYPES" value="Microsoft.FSharp.Text.Printf,Microsoft.FSharp.Text.PrintfImpl"/>
+<envVar name="PSModulePath" value="C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\"/>
+<envVar name="VSPID" value="12928"/>
+<envVar name="CLRMONITOR_INITIALIZED" value="0xc"/>
+<envVar name="USERDOMAIN" value="GÜRÇAY"/>
+<envVar name="ComSpec" value="C:\WINDOWS\system32\cmd.exe"/>
+<envVar name="CLRMONITOR_ERASE_FINALIZER_TYPES" value=""/>
+<envVar name="CLRMONITOR_INJECT_NAMESPACES" value=""/>
+<envVar name="NUMBER_OF_PROCESSORS" value="4"/>
+<envVar name="CommonProgramFiles" value="C:\Program Files (x86)\Common Files"/>
+<envVar name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+<envVar name="PUBLIC" value="C:\Users\Public"/>
+<envVar name="CLRMONITOR_INSTRUMENT_NAMESPACES_EXCLUSIONS" value=""/>
+<envVar name="CLRMONITOR_FLAGS" value=""/>
+<envVar name="VisualStudioDir" value="C:\Users\MehmetBerk\Documents\Visual Studio 2010"/>
+<envVar name="pex_instrumentation" value="1"/>
+<envVar name="CLRMONITOR_INSTRUMENT_TYPES" value="System.Array,System.Array+ArrayEnumerator,System.Array+FunctorComparer`1,System.Array+SZArrayEnumerator,System.Array+SorterGenericArray,System.Array+SorterObjectArray,System.Boolean,System.Byte,System.Char,System.CharEnumerator,System.ComponentModel.Component,System.ComponentModel.Container,System.ComponentModel.Container+Site,System.Convert,System.Currency,System.DateTime,System.Decimal,System.Diagnostics.Assert,System.Double,System.Globalization.CharUnicodeInfo,System.Globalization.CultureTableRecord,System.Globalization.TextInfo,System.Guid,System.IO.MemoryStream,System.IO.Stream,System.IO.StreamReader,System.IO.StreamWriter,System.IO.StringReader,System.IO.StringWriter,System.Int16,System.Int32,System.Int64,System.Lazy`1,System.Lazy`1+Boxed,System.Lazy`1+LazyInternalExceptionHolder,System.Math,System.Nullable,System.Nullable`1,System.OrdinalComparer,System.SByte,System.SZArrayHelper,System.SZArrayHelper+SZGenericArrayEnumerator`1,System.Single,System.String,System.StringComparer,System.Text.ASCIIEncoding,System.Text.DecoderNLS,System.Text.Encoding,System.Text.UTF8Encoding,System.TimeSpan,System.Tuple,System.Tuple`1,System.Tuple`2,System.Tuple`3,System.Tuple`4,System.Tuple`5,System.Tuple`6,System.Tuple`7,System.Tuple`8,System.UInt16,System.UInt32,System.UInt64,System.Xml.XmlTextWriter,System.Xml.XmlTextWriter+Namespace,System.Xml.XmlTextWriter+NamespaceState,System.Xml.XmlTextWriter+SpecialAttr,System.Xml.XmlTextWriter+State,System.Xml.XmlTextWriter+TagInfo,System.Xml.XmlTextWriter+Token,System.Xml.XmlWriter,System.Xml.XmlWriter+&lt;WriteAttributeStringAsyncHelper&gt;d__0,System.Xml.XmlWriter+&lt;WriteAttributesAsync&gt;d__7,System.Xml.XmlWriter+&lt;WriteElementStringAsync&gt;d__20,System.Xml.XmlWriter+&lt;WriteLocalNamespacesAsync&gt;d__23,System.Xml.XmlWriter+&lt;WriteNodeAsync&gt;d__19,System.Xml.XmlWriter+&lt;WriteNodeAsync_CallAsyncReader&gt;d__10,System.Xml.XmlWriter+&lt;WriteNodeAsync_CallSyncReader&gt;d__a,System.Xml.XmlWriter+&lt;WriteQualifiedNameAsync&gt;d__3,__Box`1,__SzArrayHelper`1"/>
+<envVar name="ProgramData" value="C:\ProgramData"/>
+<envVar name="ProgramW6432" value="C:\Program Files"/>
+<envVar name="ProgramFiles" value="C:\Program Files (x86)"/>
+<envVar name="CLRMONITOR_ERASE_CCTOR_TYPES" value=""/>
+<envVar name="FP_NO_HOST_CHECK" value="NO"/>
+<envVar name="pex_clientid" value="pex12928_1"/>
+<envVar name="windir" value="C:\WINDOWS"/>
+<envVar name="SystemRoot" value="C:\WINDOWS"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ATTRIBUTE" value="Microsoft.Moles.Framework.Moles.MolesInstrumentAttribute"/>
+<envVar name="COMPLUS_ProfAPI_ProfilerCompatibilitySetting" value="EnableV2Profiler"/>
+<envVar name="pex_server_channel" value="pex12928"/>
+<envVar name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+<envVar name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
+<envVar name="LOGONSERVER" value="\\MicrosoftAccount"/>
+<envVar name="USERPROFILE" value="C:\Users\MehmetBerk"/>
+<envVar name="CLRMONITOR_SUBSTITUTIONS" value="C:\WINDOWS\assembly\GAC_MSIL\Microsoft.ExtendedReflection\0.94.0.0__31bf3856ad364e35\Microsoft.ExtendedReflection.dll"/>
+<envVar name="USERDOMAIN_ROAMINGPROFILE" value="GÜRÇAY"/>
+<envVar name="APPDATA" value="C:\Users\MehmetBerk\AppData\Roaming"/>
+<envVar name="HOMEDRIVE" value="C:"/>
+<envVar name="CLRMONITOR_INJECT_ASSEMBLIES" value=""/>
+<envVar name="CodeContractsInstallDir" value="C:\Program Files (x86)\Microsoft\Contracts\"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ASSEMBLIES" value="FSharp.Core,FSharp.PowerPack,Microsoft.Contracts,Microsoft.VisualBasic,Microsoft.VisualStudio.QualityTools.UnitTestFramework,NatSet,System,System.Core,System.Web"/>
+<envVar name="USERNAME" value="MehmetBerk"/>
+<envVar name="COR_PROFILER" value="{21bbb412-71ac-41f9-a377-48529a4859cf}"/>
+<envVar name="PROCESSOR_ARCHITECTURE" value="x86"/>
+<envVar name="CLRMONITOR_INSTRUMENT_ASSEMBLIES_EXCLUSIONS" value="Microsoft.VisualBasic"/>
+<envVar name="OS" value="Windows_NT"/>
+<envVar name="CLRMONITOR_INSTRUMENT_NAMESPACES" value="System.Collections,System.Collections.Generic,System.Collections.ObjectModel,System.Collections.Specialized,System.Diagnostics.Contracts"/>
+<envVar name="Path" value="C:\ProgramData\Oracle\Java\javapath;c:\Program Files (x86)\AMD APP\bin\x86_64;c:\Program Files (x86)\AMD APP\bin\x86;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Windows Live\Shared;C:\Users\MehmetBerk\Desktop\eclipse_koc\eclipse\jdk1.6.0_25\jdk1.6.0_25\bin;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\"/>
+<envVar name="AMDAPPSDKROOT" value="c:\Program Files (x86)\AMD APP\"/>
+<envVar name="ALLUSERSPROFILE" value="C:\ProgramData"/>
+</envVars>
+</environment>
+<settings/>
+<reflection/>
+<assembly name="NatSet" version="1.0.0.0" fileVersion="1.0.0.0" fullName="NatSet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" location="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\bin\Debug\NatSet.dll" fileName="NatSet.dll"><settings testFramework="VisualStudioUnitTest" testLanguage="cs"/>
+<fixture name="NatSet" type="NatSet.NatSet" typeName="NatSet" token="2000003" href="fix\NatSet.628.html"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+<exploration shortName="findMax()" fullName="NatSet.NatSet.findMax()"><log level="message" time="2015-03-18 19:03:17Z" category="progress" message="    0 runs"/>
+<generatedTest id="38c690d2-8722-4bed-aed9-258c33855008" index="1" run="1" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="findMax43"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e333\cov.xml" html="cov\e333\cov.html"/>
+<result name="findMax()" state="success" duration="0,29"/>
+<duration start="2015-03-18 19:03:17Z" end="2015-03-18 19:03:17Z" seconds="0,32"/>
+</exploration>
+<exploration shortName="insert(Int32)" fullName="NatSet.NatSet.insert(Int32)"><generatedTest id="4d43669c-9e55-4eee-9866-1b17e1a28bdf" index="1" run="1" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="insert191"/>
+<generatedTest id="a1a4c3a5-a049-4db3-b654-1da7a10f6e5e" index="2" run="3" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="insertThrowsContractException322"/>
+<generatedTest id="07b7db57-c8ba-4014-b547-be34b9c744f2" index="3" run="4" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="insert265"/>
+<generatedTest id="43aece00-525c-4a37-a34c-2f52993ce47f" index="4" run="5" status="duplicatepath" generated="true" new="true" assemblyName="NatSet" name="insert919"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e342\cov.xml" html="cov\e342\cov.html"/>
+<result name="insert(Int32)" state="success" duration="2.42380445255845"/>
+<duration start="2015-03-18 19:03:17Z" end="2015-03-18 19:03:20Z" seconds="2.4254465"/>
+<trajectory><image src="fix\natsetnatsetinse635623094001804899.trajectories.png" width="800" height="1600"/>
+</trajectory>
+</exploration>
+<exploration shortName="insertTest(Int32[])" fullName="NatSet.NatSet.insertTest(Int32[])"><generatedTest id="b32c4e6e-6984-406b-b7a6-747e40374b66" index="1" run="9" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="insertTestThrowsContractException616"/>
+<generatedTest id="7518ae13-65ea-4deb-a2a8-ca71c8d28a07" index="2" run="17" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="insertTest954"/>
+<generatedTest id="47461bce-809f-4e38-ad74-e2b792f56512" index="3" run="18" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="insertTest458"/>
+<generatedTest id="66381ce3-3ffe-4869-be6e-2eb496aa7a89" index="4" run="25" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="insertTest95"/>
+<boundary kind="maxrunswithoutnewtests" value="100" message="maximum runs without new tests reached"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<log level="message" time="2015-03-18 19:03:27Z" category="symbols" message="could not merge source of NatSet.NatSet.insertTest in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs:[6195, 6258)"/>
+<log level="message" time="2015-03-18 19:03:27Z" category="symbols" message="could not merge source of NatSet.NatSet.insertTest in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs:[6272, 6335)"/>
+<sourceCoverage xml="cov\e390\cov.xml" html="cov\e390\cov.html"/>
+<result name="insertTest(Int32[])" state="success" duration="7.46817427716561"/>
+<duration start="2015-03-18 19:03:20Z" end="2015-03-18 19:03:27Z" seconds="7.4715551"/>
+<trajectory><image src="fix\natsetnatsetinse635623094076570487.trajectories.png" width="800" height="1600"/>
+</trajectory>
+</exploration>
+<exploration shortName="intersect(NatSet)" fullName="NatSet.NatSet.intersect(NatSet)"><generatedTest id="b29bc017-35e4-4021-8c5d-b062d4c4ff07" index="1" run="1" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="intersectThrowsContractException819"/>
+<generatedTest id="91734e67-66ab-47c9-bed5-bb3c70a38a61" index="2" run="15" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="intersect862"/>
+<generatedTest id="17086ffb-57c9-432a-959a-3d8a1fb72c7e" index="3" run="16" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="intersect437"/>
+<generatedTest id="813db347-5d09-448d-b74c-9a2f53158a8d" index="4" run="37" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="intersect387"/>
+<generatedTest id="97e239b4-a7f3-453d-922b-723b2d60617c" index="5" run="44" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="intersect209"/>
+<generatedTest id="9812e1e8-937a-444d-bc3b-7387d93bbd8b" index="6" run="56" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="intersect189"/>
+<log level="message" time="2015-03-18 19:03:33Z" category="progress" message="  250 constraint systems (%52,80 solved, %47,20 proven unsatisfiable)"/>
+<boundary kind="maxrunswithoutnewtests" value="100" message="maximum runs without new tests reached"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e409\cov.xml" html="cov\e409\cov.html"/>
+<result name="intersect(NatSet)" state="success" duration="7.47076725613923"/>
+<duration start="2015-03-18 19:03:27Z" end="2015-03-18 19:03:35Z" seconds="7.4729762"/>
+<trajectory><image src="fix\natsetnatsetinte635623094151310265.trajectories.png" width="800" height="1600"/>
+</trajectory>
+</exploration>
+<exploration shortName="intersectFixedTest()" fullName="NatSet.NatSet.intersectFixedTest()"><generatedTest id="63e23c0d-fe53-4d0d-9315-b76c9fccd9ec" index="1" run="1" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="intersectFixedTest01"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e452\cov.xml" html="cov\e452\cov.html"/>
+<result name="intersectFixedTest()" state="success" duration="0,23"/>
+<duration start="2015-03-18 19:03:35Z" end="2015-03-18 19:03:35Z" seconds="0,23"/>
+</exploration>
+<exploration shortName="remove(Int32)" fullName="NatSet.NatSet.remove(Int32)"><generatedTest id="06ed873b-f650-4fed-a86d-585e054f5dcb" index="1" run="1" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="removeThrowsElementNotFoundException377"/>
+<generatedTest id="4477a09a-cc8c-410e-8d40-723c81f8fae0" index="2" run="2" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="removeThrowsContractException641"/>
+<generatedTest id="08b90056-2440-4a8c-8360-feb75720be5b" index="3" run="3" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="removeThrowsElementNotFoundException964"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e455\cov.xml" html="cov\e455\cov.html"/>
+<result name="remove(Int32)" state="success" duration="0,13"/>
+<duration start="2015-03-18 19:03:35Z" end="2015-03-18 19:03:35Z" seconds="0,13"/>
+</exploration>
+<exploration shortName="removeTest(Int32[])" fullName="NatSet.NatSet.removeTest(Int32[])"><generatedTest id="8b4ddd6b-92b5-4005-8040-6393b1489598" index="1" run="9" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="removeTestThrowsContractException996"/>
+<generatedTest id="482ac566-f5a4-43c5-89d6-1bbd40faf187" index="2" run="17" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="removeTest954"/>
+<generatedTest id="5489f160-e5ff-4c3f-8e20-3eb98604e46c" index="3" run="42" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="removeTest436"/>
+<generatedTest id="22bbefbf-7f75-461b-b97a-8a15b0dff388" index="4" run="43" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="removeTest52"/>
+<generatedTest id="29cc63c0-a1db-4fd9-b6b0-77e701cfb42e" index="5" run="44" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="removeTest985"/>
+<log level="message" time="2015-03-18 19:03:37Z" category="progress" message="   68 runs (%98,53 unique paths)"/>
+<boundary kind="maxrunswithoutnewtests" value="100" message="maximum runs without new tests reached"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<log level="message" time="2015-03-18 19:03:40Z" category="symbols" message="could not merge source of NatSet.NatSet.removeTest in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs:[6836, 6899)"/>
+<log level="message" time="2015-03-18 19:03:40Z" category="symbols" message="could not merge source of NatSet.NatSet.removeTest in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs:[6913, 6976)"/>
+<sourceCoverage xml="cov\e464\cov.xml" html="cov\e464\cov.html"/>
+<result name="removeTest(Int32[])" state="success" duration="4.87888826101971"/>
+<duration start="2015-03-18 19:03:35Z" end="2015-03-18 19:03:40Z" seconds="4.8792493"/>
+<trajectory><image src="fix\natsetnatsetremo635623094203755194.trajectories.png" width="800" height="1600"/>
+</trajectory>
+</exploration>
+<exploration shortName="union(NatSet)" fullName="NatSet.NatSet.union(NatSet)"><generatedTest id="66479a87-e0f6-43f9-9ec0-db259c1f3e92" index="1" run="1" exceptionState="expected" status="expectedexception" generated="true" new="true" assemblyName="NatSet" name="unionThrowsContractException552"/>
+<generatedTest id="42e00076-fb95-4293-9c7e-3adb7aeea6bd" index="2" run="17" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union862"/>
+<generatedTest id="1bb60bd4-e7f7-404e-9102-3ebb35ccd558" index="3" run="19" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union437"/>
+<generatedTest id="fd1272ce-47b3-493e-9180-e0008e69c1c1" index="4" run="36" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union439"/>
+<generatedTest id="752db749-5a50-457e-8e40-9acff471f04f" index="5" run="42" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union950"/>
+<generatedTest id="eb97dcef-a084-4dc3-89f9-7667ca07ddce" index="6" run="44" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union416"/>
+<generatedTest id="a34a870e-24e5-478e-8827-84cd5d34d898" index="7" run="55" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union294"/>
+<generatedTest id="c834bce1-ccd4-4833-b77f-d58fec64e523" index="8" run="56" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union967"/>
+<generatedTest id="4021e9b5-c1a4-4a42-a8ae-da9f9cb5016b" index="9" run="60" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union404"/>
+<log level="message" time="2015-03-18 19:03:47Z" category="progress" message="  250 constraint systems (%35,60 solved, %64,40 proven unsatisfiable)"/>
+<log level="message" time="2015-03-18 19:03:47Z" category="progress" message="   95 runs (%94,74 unique paths, %37,89 retries)"/>
+<generatedTest id="d3a27677-e95c-4edc-929b-66a0e5fd49a5" index="10" run="104" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union209"/>
+<generatedTest id="e81dccdb-b8b9-4aef-9aa4-e8b90aa3446a" index="11" run="127" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="union219"/>
+<log level="message" time="2015-03-18 19:03:57Z" category="progress" message="  500 constraint systems (%43,20 solved, %56,80 proven unsatisfiable)"/>
+<boundary kind="maxrunswithoutnewtests" value="100" message="maximum runs without new tests reached"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e470\cov.xml" html="cov\e470\cov.html"/>
+<result name="union(NatSet)" state="success" duration="18.6958094561928"/>
+<duration start="2015-03-18 19:03:40Z" end="2015-03-18 19:03:59Z" seconds="18.6975421"/>
+<trajectory><image src="fix\natsetnatsetunio635623094390760644.trajectories.png" width="800" height="1600"/>
+</trajectory>
+</exploration>
+<exploration shortName="unionFixedTest()" fullName="NatSet.NatSet.unionFixedTest()"><generatedTest id="8d846385-4542-4a60-bb71-0b4d2157d5d4" index="1" run="1" status="normaltermination" generated="true" new="true" assemblyName="NatSet" name="unionFixedTest01"/>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\e475\cov.xml" html="cov\e475\cov.html"/>
+<result name="unionFixedTest()" state="success" duration="0,18"/>
+<duration start="2015-03-18 19:03:59Z" end="2015-03-18 19:03:59Z" seconds="0,18"/>
+</exploration>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\t628\cov.xml" html="cov\t628\cov.html"/>
+<duration start="2015-03-18 19:03:17Z" end="2015-03-18 19:03:59Z" seconds="41.932428"/>
+</fixture>
+<coverage domain="usercodeundertest" unit="block" covered="0" total="0" coveredRatio="0"/>
+<sourceCoverage xml="cov\a10078178\cov.xml" html="cov\a10078178\cov.html"/>
+<duration start="2015-03-18 19:03:17Z" end="2015-03-18 19:03:59Z" seconds="42.0565112"/>
+<frameTreeRef exceptionCount="2"/>
+</assembly>
+<duration start="2015-03-18 19:03:17Z" end="2015-03-18 19:03:59Z" seconds="42.142565"/>
+<background/>
+</pex>

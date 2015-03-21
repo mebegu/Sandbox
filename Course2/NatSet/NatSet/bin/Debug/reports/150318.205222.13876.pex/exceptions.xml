@@ -1,0 +1,45 @@
+﻿<frameTree version="0.94.51006.1"><frameException type="System.Diagnostics.Contracts.__ContractsRuntime+ContractException"><tag exceptionState="expected"><generatedTestRef idref="bac31a71-c328-4f9a-add2-039e4b8bdb86"/>
+</tag>
+<frameNode><frame value="  at NatSet.insert(Int32) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(53)" method="NatSet.insert(Int32)" offset="0" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="53"><method assemblyName="NatSet" name="insert" token="6000004"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="k" position="1"><type spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        [PexAllowedContractRequiresFailure]
+        public void insert(int k)
+        {]]></beforeSource>
+<source><![CDATA[            Contract.Requires(k >= 0);]]></source>
+<afterSource><![CDATA[            Contract.Ensures(k<100 ? sm[k] : rest.Contains(k));
+            Contract.Ensures(max == findMax());
+]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="bac31a71-c328-4f9a-add2-039e4b8bdb86"/>
+</tag>
+</frameNode>
+<frameNode><frame value="  at NatSet.insertTest(Int32[]) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(181)" method="NatSet.insertTest(Int32[])" offset="326" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="181"><method assemblyName="NatSet" name="insertTest" token="600000a"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="values" position="1"><type spec="SzArray"><elementType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</elementType>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[        private void insertTest(int[] values)
+        {
+            Contract.Ensures(Contract.ForAll(0,values.Length, i=> values[i] < 100 ? this.sm[values[i]] : this.rest.Contains(values[i])));]]></beforeSource>
+<source><![CDATA[            Contract.Ensures(max == values.Max());]]></source>
+<afterSource><![CDATA[            PexAssume.IsNotNullOrEmpty(values);
+            PexAssume.TrueForAny(0, values.Length, i => (values[i] > 100));
+            PexAssume.TrueForAny(0, values.Length, i => (values[i] < 100));]]></afterSource>
+</frame>
+<tag exceptionState="expected"><generatedTestRef idref="ac3b233a-ec7d-4094-83b3-0c2689b5403c"/>
+<generatedTestRef idref="6803bceb-0c6f-4c55-b188-366a64bb0c34"/>
+<generatedTestRef idref="9e0cb0a4-8f66-4583-af14-91e905f77062"/>
+</tag>
+</frameNode>
+</frameException>
+</frameTree>

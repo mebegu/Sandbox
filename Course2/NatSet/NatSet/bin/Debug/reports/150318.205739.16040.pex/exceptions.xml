@@ -1,0 +1,24 @@
+﻿<frameTree version="0.94.51006.1"><frameException type="System.NullReferenceException"><tag exceptionState="unexpected"><generatedTestRef idref="537de9f6-aae4-4d02-ad04-64791227603d"/>
+</tag>
+<frameNode><frame value="  at NatSet.insertTest(Int32[]) in C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs(189)" method="NatSet.insertTest(Int32[])" offset="114" file="C:\Users\MehmetBerk\documents\visual studio 2010\Projects\NatSet\NatSet\NatSet.cs" line="189"><method assemblyName="NatSet" name="insertTest" token="600000a"><declaringType assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+<parameter this="true" name="this" position="0"><type spec="Class"><definition assemblyName="NatSet" name="NatSet" token="2000003" namespace="NatSet"/>
+</type>
+</parameter>
+<parameter name="values" position="1"><type spec="SzArray"><elementType spec="ValueType"><definition assemblyName="mscorlib" valueType="true" name="Int32" token="20000f6" namespace="System"/>
+</elementType>
+</type>
+</parameter>
+</method>
+<beforeSource><![CDATA[            PexAssume.TrueForAny(0, values.Length, i => (values[i] < 100));
+
+            for (int i = 0; i < values.Length; i++)]]></beforeSource>
+<source><![CDATA[                testSet.insert(values[i]);]]></source>
+<afterSource><![CDATA[
+        }
+]]></afterSource>
+</frame>
+<tag exceptionState="unexpected"><generatedTestRef idref="537de9f6-aae4-4d02-ad04-64791227603d"/>
+</tag>
+</frameNode>
+</frameException>
+</frameTree>
