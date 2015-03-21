@@ -1,0 +1,8 @@
+TO-DO list
+
+1- implement Student.calculateGPA()
+2- implement FileIO.read()
+3- implement Student.write()
+4- create controller class
+5- implement delete functionality
+6- test
