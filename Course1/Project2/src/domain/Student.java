@@ -57,8 +57,19 @@ public class Student {
 	}
 	
 	public double calculateGPA(){
-		int gpa = 0;
+		double gpa = 0;
+		int totalCredit = 0;
+		double totalGrade = 0;
 		
+		for(int i=0; i<registeredCourseIDs.size(); i++ ){
+			int courseID = registeredCourseIDs.get(i);
+			double grade = InfoStorage.getInstance().getGrade(courseID, SID);
+			int credit = Course.getCourse(courseID).getCredit();
+			totalCredit += credit;
+			totalGrade += (credit*grade);
+		}
+		
+		gpa = totalGrade/totalCredit;
 		
 		return gpa;
 	}
@@ -68,18 +79,18 @@ public class Student {
 	
 	private static void addStudent(Student student){
 		if(allStudents == null)
-			allStudents = new Student[InfoStorage.getInstance().getStudentTXT().length];
+			allStudents = new Student[InfoStorage.getInstance().getStudentTXT().length*2];
 		
-		int key = student.getSID() % allStudents.length;
+		int key = student.getSID() % allStudents.length*2;
 		int count = 0;
 		
-		while(allStudents[key] != null && count < allStudents.length) {
+		while(allStudents[key] != null && count < allStudents.length*2) {
 			key++;
 			count++;
-			key = key % allStudents.length;
+			key = key % allStudents.length*2;
 		}
 		
-		if(count < allStudents.length)
+		if(count < allStudents.length*2)
 			allStudents[key] = student;
 		else
 			throw new RuntimeException("Student list is full.");

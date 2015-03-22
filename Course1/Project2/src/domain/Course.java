@@ -71,21 +71,21 @@ public class Course {
 	
 	private static void addCourse(Course course){
 		if(allCourses == null)
-			allCourses = new Course[InfoStorage.getInstance().getCourseTXT().length];
+			allCourses = new Course[InfoStorage.getInstance().getCourseTXT().length*2];
 		
 		int key = course.getCIN() % allCourses.length;
 		int count = 0;
 		
-		while(allCourses[key] != null && count < allCourses.length) {
+		while(allCourses[key] != null && count < allCourses.length*2) {
 			key++;
 			count++;
-			key = key % allCourses.length;
+			key = key % allCourses.length*2;
 		}
 		
-		if(count < allCourses.length)
+		if(count < allCourses.length*2)
 			allCourses[key] = course;
 		else
-			throw new RuntimeException("Student list is full.");
+			throw new RuntimeException("Course list is full.");
 	}
 	
 	public static Course getCourse(int ID){

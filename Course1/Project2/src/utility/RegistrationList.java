@@ -1,5 +1,7 @@
 package utility;
 
+import java.io.FileNotFoundException;
+
 import domain.Course;
 import domain.Student;
 
@@ -19,7 +21,13 @@ class RegistrationList {
 	}
 
 	private RegistrationList() {
-		size = Integer.parseInt(FileIO.getInstance().read(FileIO.hashTableSize)[0]);
+		try {
+			size = Integer.parseInt(FileIO.getInstance().read(FileIO.hashTableSize)[0]);
+		} catch (NumberFormatException | FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		memo = new RegistrationListNode[size];
 	}
 	

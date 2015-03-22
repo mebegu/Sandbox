@@ -1,5 +1,7 @@
 package utility;
 
+import java.io.FileNotFoundException;
+
 public class InfoStorage{
 	private String[] studentTXT;
 	private String[] courseTXT;
@@ -16,9 +18,14 @@ public class InfoStorage{
 		if(instance == null)
 			instance = new InfoStorage();
 		
-		instance.courseTXT = FileIO.getInstance().read(FileIO.studentData);
-		instance.courseTXT = FileIO.getInstance().read(FileIO.studentData);
-		instance.instructionsTXT = FileIO.getInstance().read(FileIO.instructions);
+		try {
+			instance.studentTXT = FileIO.getInstance().read(FileIO.studentData);
+			instance.courseTXT = FileIO.getInstance().read(FileIO.courseData);
+			instance.instructionsTXT = FileIO.getInstance().read(FileIO.instructions);
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		
 		return instance;
 	}
