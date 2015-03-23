@@ -1,12 +1,17 @@
 package utility;
 
 import java.io.FileNotFoundException;
+import domain.*;
 
 public class InfoStorage{
 	private String[] studentTXT;
 	private String[] courseTXT;
 	private String[] instructionsTXT;
 	private static InfoStorage instance;
+	
+	private HashList<HashList<Double>> registrationList;
+	private HashList<Course> allCourses;
+	private HashList<Student> allStudents;
 	
 	public static InfoStorage getInstance(){
 		if(instance == null)
@@ -30,7 +35,11 @@ public class InfoStorage{
 		return instance;
 	}
 
-	private InfoStorage() {}
+	private InfoStorage() {
+		registrationList = new HashList<HashList<Double>>();
+		allCourses = new HashList<Course>();
+		allStudents = new HashList<Student>();
+	}
 
 	public String[] getStudentTXT() {
 		return studentTXT;
@@ -44,12 +53,31 @@ public class InfoStorage{
 		return instructionsTXT;
 	}
 	
+	public void addStudent(Student student){
+		allStudents.put(student.getSID(), student);
+	}
+	
+	public void addCourse(Course course){
+		allCourses.put(course.getCIN(), course);
+	}
+	
 	public void register(int courseID, int studentID, double grade){
-		RegistrationList.getInstance().register(courseID, studentID, grade);
+		if(registrationList.getValue(courseID)== null){
+			HashList<Double> classList = new HashList<Double>();
+			classList.put(studentID, grade);
+			registrationList.put(courseID, classList);
+		}else{
+			registrationList.getValue(courseID).put(studentID, grade);
+		}
+		
 	}
 	
 	public double getGrade(int courseID, int studentID){
-		return RegistrationList.getInstance().getGrade(courseID, studentID);
+		if(registrationList.getValue(courseID)== null){
+			return registrationList.getValue(courseID).getValue(studentID);
+		}else{
+			throw new NullPointerException();
+		}
 	}
 	
 	
