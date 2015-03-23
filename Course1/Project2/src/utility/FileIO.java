@@ -5,61 +5,86 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class FileIO {
-	protected final static int instructions = 0;
-	protected final static int hashTableSize= 1;
-	protected final static int studentData= 2;
-	protected final static int courseData= 3;
+public class FileIO {
+	public final static int instructions = 0;
+	public final static int hashTableSize= 1;
+	public final static int studentData= 2;
+	public final static int courseData= 3;
+	
 	private static String insFileName;
 	private static String hSizeFileName;
+	private static String studentFileName;
+	private static String courseFileName;
+	
 	private static FileIO instance;
 	
-	protected static FileIO getInstance(){
+	public static FileIO getInstance(){
 		if(instance == null)
 			instance = new FileIO();
 		return instance;
 	}
 	
-	protected static void setInstance(String insFileName, String hSizeFileName){
-		FileIO.insFileName = insFileName;
-		FileIO.hSizeFileName = hSizeFileName;
+	public static void setInstance(int fileType, String fileName){
+
+		switch (fileType){
+			case 0:
+				insFileName = fileName;
+				break;
+			case 1:
+				hSizeFileName = fileName;
+				break;
+			case 2:
+				studentFileName = fileName;
+				break;
+			case 3:
+				courseFileName = fileName;
+				break;
+			default:
+				throw new RuntimeException("The requested file type for instance settings does not exists.");	
+			}
 	}
+	
+	
 	private FileIO() {}
 
-	protected String[] read(int operationName) throws FileNotFoundException{
-		ArrayList<String> lines = new ArrayList<String>();   
+	public String[] read(int operationName) throws FileNotFoundException{
+		ArrayList<String> txt = new ArrayList<String>();   
 		String fileName = getFileName(operationName);
+		if(fileName == null)
+			throw new RuntimeException("Requested operation's instance was not setted.");
 		
 		Scanner scan = new Scanner(new File(fileName));
 		
 		while (scan.hasNextLine()){
-			lines.add(scan.nextLine());
+			String line = scan.nextLine();
+			if(!line.equals(""))
+				txt.add(line);
+		}
+		scan.close();	
+		String[] lines = new String[txt.size()];
+		for(int i=0; i<txt.size(); i++){
+			lines[i]= txt.get(i);
 		}
 		
-		scan.close();	
-		return (String[]) lines.toArray();
+		return lines;
 	}
 	
 	private String getFileName(int operationName) {
-		if(insFileName == null && hSizeFileName == null)
-			throw new RuntimeException("Instances were not setted.");
-		
-		
 		switch (operationName){
 			case 0:
 				return insFileName;
 			case 1:
 				return hSizeFileName;
 			case 2:
-				return "students.txt";
+				return studentFileName;
 			case 3:
-				return "courses.txt";
+				return courseFileName;
 			default:
 				throw new RuntimeException("The requested operation for file reading does not exists.");	
 			}
 	}
 
-	protected void write(String[] lines){
+	public void write(String[] lines){
 		
 	}
 }
