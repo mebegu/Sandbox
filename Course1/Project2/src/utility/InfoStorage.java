@@ -46,7 +46,7 @@ public class InfoStorage{
 	}
 	
 	public void register(int courseID, int studentID, double grade){
-		if(allStudents.getValue(studentID).register(courseID)){
+		if(allStudents.getValue(studentID) != null && allStudents.getValue(studentID).register(courseID)){
 			if(registrationList.getValue(studentID)== null){
 				HashList<Double> courseList = new HashList<Double>();
 				courseList.put(courseID, grade);
@@ -61,7 +61,8 @@ public class InfoStorage{
 		double gpa = 0;
 		int totalCredit = 0;
 		double totalGrade = 0;
-		
+		if(registrationList.getValue(studentID) == null)
+			return -1;
 		
 		HashList<Double> registeredCourses = registrationList.getValue(studentID);
 		ArrayList<Integer> registeredCourseIDs = allStudents.getValue(studentID).getRegisteredCourseIDs();
@@ -79,19 +80,30 @@ public class InfoStorage{
 		return gpa;
 	}
 
-	public void editCourse(int courseID, String courseTitle, int courseCredit,
+	public boolean editCourse(int courseID, String courseTitle, int courseCredit,
 			String courseSemester) {
 		
-		allCourses.getValue(courseID).setTitle(courseTitle);
-		allCourses.getValue(courseID).setCredit(courseCredit);
-		allCourses.getValue(courseID).setSemester(courseSemester);
+		if(allCourses.getValue(courseID) == null)
+			return false;
+		else{
+			allCourses.getValue(courseID).setTitle(courseTitle);
+			allCourses.getValue(courseID).setCredit(courseCredit);
+			allCourses.getValue(courseID).setSemester(courseSemester);
+			return true;
+		}
 	}
 
-	public void editStudent(int studentID, String studentName,
+	public boolean editStudent(int studentID, String studentName,
 			String studentSurname) {
-		
-		allStudents.getValue(studentID).setName(studentName);
-		allStudents.getValue(studentID).setSurname(studentSurname);
+
+		if(allStudents.getValue(studentID) == null)
+			return false;
+		else{
+			allStudents.getValue(studentID).setName(studentName);
+			allStudents.getValue(studentID).setSurname(studentSurname);
+			return true;
+		}
+			
 		
 	}
 
@@ -129,6 +141,7 @@ public class InfoStorage{
 
 	public void deleteStudent(int studentID) {
 		allStudents.delete(studentID);
+		System.err.println("allStudent: "+allStudents.getValue(studentID));
 		registrationList.delete(studentID);
 	}
 
@@ -139,9 +152,27 @@ public class InfoStorage{
 		for(int i=0; i<allStudents.length; i++){
 			if(allStudents[i].isRegisteredTo(courseID)){
 				registrationList.getValue(allStudents[i].getSID()).delete(courseID);
-				allStudents[i].unregister(courseID);
+				this.allStudents.getValue(allStudents[i].getSID()).unregister(courseID);
 			}
 		}
+	}
+
+
+	public void printAllDatabase() {
+		System.err.println("allStudents: "+allStudents);
+		allStudents.printStructure();
+		System.err.println("\n\nallCourses: "+allCourses);
+		allCourses.printStructure();
+		System.err.println("\n\nregistrationList: "+registrationList);
+		registrationList.printStructure();
+		
+		for(int i=0; i<20; i++){
+			if(registrationList.getValue(i)!=null){
+				System.err.println("\nregistration list for student:" +i);
+				registrationList.getValue(i).printStructure();
+			}
+		}
+		
 	}
 	
 	

@@ -74,10 +74,17 @@ public class Controller {
 		int studentID = Integer.parseInt(operation[1]);
 		double gpa = InfoStorage.getInstance().getGPA(studentID);
 		
-		String[] lines = new String[1];
-		lines[0] = "GPA for SID = "+studentID+" : "+gpa+".";
-		
-		FileIO.getInstance().write(lines);
+		if(gpa != -1){
+			String[] lines = new String[1];
+			lines[0] = "GPA for SID = "+studentID+" : "+gpa+".";
+			
+			FileIO.getInstance().write(lines);
+		}else{
+			String[] lines = new String[1];
+			lines[0] = "Registration list does not contain the student with SID "+studentID;
+			
+			FileIO.getInstance().write(lines);
+		}
 		
 	}
 
@@ -107,6 +114,10 @@ public class Controller {
 			InfoStorage.getInstance().deleteCourse(Integer.parseInt(operation[2]));
 		else
 			throw new RuntimeException("Parse error!");
+		
+		String[] lines = new String[1];
+		lines[0] = "Completed.(Deleted)";
+		FileIO.getInstance().write(lines);
 	}
 
 	private void printAllCourses() {
@@ -127,7 +138,8 @@ public class Controller {
 		String[] lines = new String[students.length];
 		
 		for(int i = 0; i<students.length; i++)
-			lines[i] = students[i].toString();
+			if(students[i] != null)
+				lines[i] = students[i].toString();
 		
 		
 		FileIO.getInstance().write(lines);
@@ -143,13 +155,17 @@ public class Controller {
 		int courseCredit = Integer.parseInt(operation[3]);
 		String courseSemester = operation[4];
 		
-		InfoStorage.getInstance().editCourse(courseID, courseTitle, courseCredit, courseSemester);
-		
-		String[] lines = new String[1];
-		lines[0] = "Completed.";
-		
-		FileIO.getInstance().write(lines);
-		
+		if(InfoStorage.getInstance().editCourse(courseID, courseTitle, courseCredit, courseSemester))
+		{
+			String[] lines = new String[1];
+			lines[0] = "Completed.";
+			
+			FileIO.getInstance().write(lines);
+		}else{
+			String[] lines = new String[1];
+			lines[0] = "Course does not exists";
+			FileIO.getInstance().write(lines);
+		}
 	}
 
 	private void editStudent(String[] operation) {
@@ -160,12 +176,17 @@ public class Controller {
 		String studentName = operation[2];
 		String studentSurname = operation[3];
 		
-		InfoStorage.getInstance().editStudent(studentID, studentName, studentSurname);
-		
-		String[] lines = new String[1];
-		lines[0] = "Completed.";
-		
-		FileIO.getInstance().write(lines);
+		if(InfoStorage.getInstance().editStudent(studentID, studentName, studentSurname))
+		{
+			String[] lines = new String[1];
+			lines[0] = "Completed.";
+			
+			FileIO.getInstance().write(lines);
+		}else{
+			String[] lines = new String[1];
+			lines[0] = "Student does not exists";
+			FileIO.getInstance().write(lines);
+		}
 		
 	}
 

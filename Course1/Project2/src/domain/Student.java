@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Student{
 	@Override
 	public String toString() {
-		return "Student [SID=" + SID + ", name=" + name + "]";
+		return SID+" "+name+" "+surname;
 	}
 
 	private int SID;

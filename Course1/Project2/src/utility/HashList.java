@@ -42,6 +42,8 @@ class HashList <K>{
 		
 		if(count < memo.length){
 			memo[hashKey] = new HashListNode(key, value);
+			//System.err.println("MemoLoc: "+this+" =>Key:" +key+" Hash of key: "+hash(key)+" value: "+value+" hashKey: "+hashKey);
+			//System.err.println("MemoLocParent: "+this+" => Element: "+hashKey+" MemoLocValue:" +memo[hashKey]+" Value: "+memo[hashKey].getKey());
 		}
 		else
 			throw new RuntimeException("Hash list is full.");
@@ -51,14 +53,14 @@ class HashList <K>{
 	protected K getValue(int key){
 		int hashKey = hash(key);
 		int count = 0;
-		
-		while(count < memo.length && memo[hashKey].getKey() != key) {
+		while(count < memo.length && memo[hashKey] != null && memo[hashKey].getKey() != key) {
 			hashKey++;
 			count++;
 			hashKey = hash(hashKey)%20;
+
 		}
 		
-		if(count < memo.length){
+		if(count < memo.length && memo[hashKey] != null && memo[hashKey].getValue() != null){
 			return memo[hashKey].getValue();
 		}
 		else
@@ -68,11 +70,8 @@ class HashList <K>{
 	protected ArrayList<K> toArrayList() {
 		ArrayList<K> result = new ArrayList<K>();
 		for(int i=0; i<memo.length; i++)
-			if(memo[i] != null)
+			if(memo[i] != null && memo[i].getValue() != null)
 				result.add(memo[i].getValue());
-		
-		for(int i=0; i<result.size(); i++)
-				System.out.println(result.get(i));
 		return result;
 	}
 	
@@ -80,14 +79,32 @@ class HashList <K>{
 		int hashKey = hash(key);
 		int count = 0;
 		
-		while(count < memo.length && memo[hashKey].getKey() != key) {
+		while(count < memo.length && memo[hashKey] != null && memo[hashKey].getKey() != key) {
 			hashKey++;
 			count++;
 			hashKey = hash(hashKey);
 		}
+		//System.err.println("Key: "+key+" Hash of key: "+hash(key)+" hashKey: "+hashKey);
+		if(count < memo.length && memo[hashKey] != null){
+			memo[hashKey] = new HashListNode<K>(-1, null);
+		}
+		//System.err.println("after: "+memo[hashKey].getValue());
 		
-		if(count < memo.length){
-			memo[hashKey] = null;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public void printStructure() {
+		for(int i=0; i<memo.length; i++){
+			if(memo[i] != null)
+				System.out.println("Element: "+i+" =>"+memo[i]+" | Key: "+memo[i].getKey());
+			else
+				System.out.println("Element: "+i+" =>"+memo[i]);
+			
+			if(memo[i] != null && memo[i].getValue() instanceof HashList){
+				System.err.println("Printing Child's structure: ");
+				((HashList)memo[i].getValue()).printStructure();
+				System.err.println("^^^^^^^^^^^^^^");
+			}
 		}
 		
 	}

@@ -6,7 +6,7 @@ public class Course{
 	
 	@Override
 	public String toString() {
-		return "Course [CIN=" + CIN + ", title=" + title + "]";
+		return CIN+" "+title+" "+credit+" "+semester;
 	}
 
 	private int CIN;
@@ -19,6 +19,7 @@ public class Course{
 		setCIN(CIN);
 		this.title = title;
 		this.semester = semester;
+		this.credit = credit;
 	}
 
 	public int getCredit() {
