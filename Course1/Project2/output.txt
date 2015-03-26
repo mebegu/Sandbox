@@ -1,0 +1,63 @@
+Completed.
+
+3012 Avdan Weiz
+2112 Ava Boe
+3013 Stella Garner
+9134 Meg Griffin
+1204 Asher Bissell
+9278 Louis Griffin
+8271 Meg Simpsons
+3091 Allson Clo
+1242 Brian Mather
+9261 Asa Thompson
+8421 Maximilian Neubert
+2419 Stella Jay
+
+Completed.
+
+No student with SID = 2012!
+
+3012 Avdan Weiz
+2112 Ava Boe
+3013 Stella Garner
+9134 Meg Griffin
+1204 Asher Bissell
+9278 Louis Griffin
+8271 Meg Simpsons
+3091 Allison Clough
+1242 Brian Mather
+9261 Asa Thompson
+8421 Maximilian Neubert
+2419 Stella Jay
+
+Completed.
+
+756 ADVCOMP 4 FALL14
+517 LIT2 2 FALL15
+230 DSTRUCT 3 FALL14
+638 DIFFEQ 4 FALL14
+124 CALC1 4 SPRING15
+135 CALC2 4 FALL14
+846 LIT1 2 SPRING13
+139 HISTORY 2 SPRING14
+836 MARK1 2 SPRING14
+587 ECON 3 SPRING14
+
+Completed.
+
+Completed.
+
+Completed.
+
+Completed.
+
+Completed.
+
+Completed.
+
+Completed.
+
+Completed.
+
+GPA for SID = 3091 : 3.17.
+
