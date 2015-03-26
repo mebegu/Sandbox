@@ -167,6 +167,9 @@ class HashList <J,K>{
 					return memo[curr++].getKey();				
 			}
 
+			@Override
+			public void remove() {	}
+
 
 		};
 	}
@@ -203,6 +206,10 @@ class HashList <J,K>{
 				else
 					return memo[curr++].getValue();
 			}
+
+			@Override
+			public void remove() { } 
+			
 		};
 	}
 
@@ -237,6 +244,10 @@ class HashList <J,K>{
 				else
 					return memo[curr++];
 			}
+
+			@Override
+			public void remove() { }
+			
 		};
 	}
 
