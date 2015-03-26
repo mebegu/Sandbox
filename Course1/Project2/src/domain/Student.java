@@ -1,6 +1,5 @@
 package domain;
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
 
 
 public class Student{
@@ -12,31 +11,12 @@ public class Student{
 	private int SID;
 	private String name;
 	private String surname;
-	private ArrayList<Integer> registeredCourseIDs = new ArrayList<Integer>();
 
 
 	public Student(int ID,String name, String surname) {
 		setSID(ID);
 		setName(name);
 		setSurname(surname);
-	}
-	
-	public boolean register(int courseID){
-		if(!registeredCourseIDs.contains(courseID)){
-			registeredCourseIDs.add(courseID);
-			return true;
-		}else{
-			System.out.println("A student can only register to a course once.");
-			return false;
-		}
-	}
-	
-	public boolean isRegisteredTo(int courseID){
-		return registeredCourseIDs.contains(courseID);
-	}
-	
-	public void unregister(int courseID){
-		registeredCourseIDs.remove(courseID);
 	}
 
 	public int getSID() {
@@ -65,9 +45,9 @@ public class Student{
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-
-	public ArrayList<Integer> getRegisteredCourseIDs() {
-		return registeredCourseIDs;
+	
+	public int hashCode(){
+		return SID;
 	}
 	
 }

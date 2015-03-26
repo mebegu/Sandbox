@@ -1,20 +1,22 @@
 package utility;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 
 
-class HashList <K>{
+class HashList <J,K>{
 	
 	
-	private HashListNode<K>[] memo;
+	private HashListNode<J,K>[] memo;
+	private int capacity;
 	private int size;
 
 	@SuppressWarnings("unchecked")
 	protected HashList() {
 			try {
-				size = Integer.parseInt(FileIO.getInstance().read(FileIO.hashTableSize)[0]);
+				capacity = Integer.parseInt(FileIO.getInstance().read(FileIO.hashTableSize)[0]);
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
@@ -22,7 +24,7 @@ class HashList <K>{
 			}
 
 
-		memo = new HashListNode[size];
+		memo = new HashListNode[capacity];
 	}
 	
 	private int hash(int key){
@@ -30,8 +32,8 @@ class HashList <K>{
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	protected  void put(int key, K value){
-		int hashKey = hash(key);
+	protected  void put(J key, K value){
+		int hashKey = hash(key.hashCode());
 		int count = 0;
 		
 		while(count < memo.length && memo[hashKey] != null) {
@@ -42,6 +44,7 @@ class HashList <K>{
 		
 		if(count < memo.length){
 			memo[hashKey] = new HashListNode(key, value);
+			size++;
 			//System.err.println("MemoLoc: "+this+" =>Key:" +key+" Hash of key: "+hash(key)+" value: "+value+" hashKey: "+hashKey);
 			//System.err.println("MemoLocParent: "+this+" => Element: "+hashKey+" MemoLocValue:" +memo[hashKey]+" Value: "+memo[hashKey].getKey());
 		}
@@ -50,10 +53,11 @@ class HashList <K>{
 		
 	}
 	
-	protected K getValue(int key){
-		int hashKey = hash(key);
+	protected K getValue(J key){
+		
+		int hashKey = hash(key.hashCode());
 		int count = 0;
-		while(count < memo.length && memo[hashKey] != null && memo[hashKey].getKey() != key) {
+		while(count < memo.length && memo[hashKey] != null && memo[hashKey].getKey() != null && memo[hashKey].getKey().hashCode() != key.hashCode()) {
 			hashKey++;
 			count++;
 			hashKey = hash(hashKey)%20;
@@ -66,30 +70,128 @@ class HashList <K>{
 		else
 			return null;
 	}
-
-	protected ArrayList<K> toArrayList() {
-		ArrayList<K> result = new ArrayList<K>();
-		for(int i=0; i<memo.length; i++)
-			if(memo[i] != null && memo[i].getValue() != null)
-				result.add(memo[i].getValue());
-		return result;
-	}
 	
-	protected  void delete(int key){
-		int hashKey = hash(key);
+	protected  void remove(J key){
+		
+		int hashKey = hash(key.hashCode());
 		int count = 0;
 		
-		while(count < memo.length && memo[hashKey] != null && memo[hashKey].getKey() != key) {
+		while(count < memo.length && memo[hashKey] != null && memo[hashKey].getKey() != null && memo[hashKey].getKey().hashCode() != key.hashCode()) {
 			hashKey++;
 			count++;
 			hashKey = hash(hashKey);
 		}
 		//System.err.println("Key: "+key+" Hash of key: "+hash(key)+" hashKey: "+hashKey);
 		if(count < memo.length && memo[hashKey] != null){
-			memo[hashKey] = new HashListNode<K>(-1, null);
+			memo[hashKey] = new HashListNode<J,K>(null, null);
+			size--;
 		}
 		//System.err.println("after: "+memo[hashKey].getValue());
 		
+	}
+	
+	protected Iterator<J> keySet(){
+
+		return new Iterator<J>() {
+			private int curr = 0;
+
+			@Override
+			public boolean hasNext() {
+				int count = curr;
+				while(count < memo.length && (memo[count] == null || memo[count].getValue() == null))
+					count++;
+
+				if(count == memo.length)
+					return false;
+				else
+					return true;
+			}
+
+			@Override
+			public J next() {
+				while(curr <= memo.length && (memo[curr] == null || memo[curr].getValue() == null))
+					curr++;
+
+				if(curr == memo.length)
+					throw new NoSuchElementException();	
+				else
+					return memo[curr++].getKey();				
+			}
+
+
+		};
+	}
+		
+	
+	
+	protected Iterator<K> values(){
+
+		return new Iterator<K>() {
+			private int curr = 0;
+
+			@Override
+			public boolean hasNext() {
+				int count = curr;
+				while(count < memo.length && (memo[count] == null || memo[count].getValue() == null))
+					count++;
+
+				if(count == memo.length)
+					return false;
+				else
+					return true;
+				
+			}
+
+			@Override
+			public K next() {
+				while(curr <= memo.length && (memo[curr] == null || memo[curr].getValue() == null))
+					curr++;
+
+				if(curr == memo.length)
+					throw new NoSuchElementException();	
+				else
+					return memo[curr++].getValue();
+			}
+		};
+	}
+	
+	protected Iterator<HashListNode<J,K>> entrySet(){
+
+		return new Iterator<HashListNode<J,K>>() {
+			private int curr = 0;
+
+			@Override
+			public boolean hasNext() {
+				int count = curr;
+				while(count < memo.length && (memo[count] == null || memo[count].getValue() == null))
+					count++;
+
+				if(count == memo.length)
+					return false;
+				else
+					return true;
+			}
+
+			@Override
+			public HashListNode<J,K> next() {
+				while(curr <= memo.length && (memo[curr] == null || memo[curr].getValue() == null))
+					curr++;
+
+				if(curr == memo.length)
+					throw new NoSuchElementException();	
+				else
+					return memo[curr++];
+			}
+		};
+	}
+
+	
+	protected int size(){
+		return size;
+	}
+	
+	protected boolean isEmpty(){
+		return size==0;
 	}
 
 	@SuppressWarnings("rawtypes")
@@ -101,7 +203,7 @@ class HashList <K>{
 				System.out.println("Element: "+i+" =>"+memo[i]);
 			
 			if(memo[i] != null && memo[i].getValue() instanceof HashList){
-				System.err.println("Printing Child's structure: ");
+				System.out.println("Printing Child's structure: ");
 				((HashList)memo[i].getValue()).printStructure();
 				System.err.println("^^^^^^^^^^^^^^");
 			}

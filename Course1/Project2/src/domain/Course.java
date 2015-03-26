@@ -58,4 +58,8 @@ public class Course{
 		return semester;
 	}
 	
+	public int hashCode(){
+		return CIN;
+	}
+	
 }

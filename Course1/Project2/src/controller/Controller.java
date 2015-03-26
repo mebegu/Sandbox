@@ -61,7 +61,7 @@ public class Controller {
 			printGPA(operation);
 			break;
 		default:
-			System.err.println("Operation category does not exits.");
+			System.err.println("Operation category does not exits. : "+operation[0]);
 			break;
 	}
 		
@@ -70,22 +70,30 @@ public class Controller {
 	private void printGPA(String[] operation) {
 		if(operation.length != 2)
 			throw new RuntimeException("Parse error!");
-		
+
 		int studentID = Integer.parseInt(operation[1]);
 		double gpa = InfoStorage.getInstance().getGPA(studentID);
-		
-		if(gpa != -1){
-			String[] lines = new String[1];
-			lines[0] = "GPA for SID = "+studentID+" : "+gpa+".";
-			
-			FileIO.getInstance().write(lines);
-		}else{
-			String[] lines = new String[1];
-			lines[0] = "Registration list does not contain the student with SID "+studentID;
-			
-			FileIO.getInstance().write(lines);
+
+		String[] result = new String[1];
+
+		switch ((int)gpa){
+		case -1:
+			result[0] = "GPA cannot be calculated. Student with ID: "+studentID+" does not exists";
+			break;
+		case -2:
+			result[0] = "GPA cannot be calculated. Registration list does not contain the student with ID: "+studentID;
+			break;
+		case -3:
+			result[0] = "GPA cannot be calculated. Student with ID: "+studentID+" was not registered to any course.";
+			break;
+		default:
+			result[0] = "GPA for Student with ID "+studentID+" : "+gpa+".";
+			break;
 		}
-		
+
+
+		FileIO.getInstance().bufferOutput(result);
+
 	}
 
 	private void register(String[] operation) {
@@ -96,53 +104,99 @@ public class Controller {
 		int courseID = Integer.parseInt(operation[2]);
 		double grade = Double.parseDouble(operation[3]);
 		
-		InfoStorage.getInstance().register(courseID, studentID, grade);
+		String[] result = new String[1];
 		
-		String[] lines = new String[1];
-		lines[0] = "Completed.";
+		switch (InfoStorage.getInstance().register(courseID, studentID, grade)) {
+		case -1:
+			result[0] = "Registration is not completed. There is no such course with ID: "+courseID;
+			break;
+		case -2:
+			result[0] = "Registration is not completed. There is no such student with ID: "+studentID;
+			break;
+		default:
+			result[0] = "student with ID: "+studentID+", registered to course with ID: "+courseID+". Grade: "+grade;
+			break;
+		}
+
 		
-		FileIO.getInstance().write(lines);
+		FileIO.getInstance().bufferOutput(result);
 	}
 
 	private void delete(String[] operation) {
 		if(operation.length != 3)
 			throw new RuntimeException("Parse error!");
 		
-		if(operation[1].equals("student"))
-			InfoStorage.getInstance().deleteStudent(Integer.parseInt(operation[2]));
-		else if(operation[1].equals("course"))
-			InfoStorage.getInstance().deleteCourse(Integer.parseInt(operation[2]));
-		else
-			throw new RuntimeException("Parse error!");
+		String[] result = new String[1];
 		
-		String[] lines = new String[1];
-		lines[0] = "Completed.(Deleted)";
-		FileIO.getInstance().write(lines);
+		if(operation[1].equals("student")){
+			
+			if(InfoStorage.getInstance().deleteStudent(Integer.parseInt(operation[2])))
+				result[0] = "Student with ID: "+operation[2]+" is deleted.";
+			else
+				result[0] = "Deletion is not completed. Student with ID: "+operation[2]+" already does not exists";
+			
+		}else if(operation[1].equals("course")){
+			
+			if(InfoStorage.getInstance().deleteCourse(Integer.parseInt(operation[2])))
+				result[0] = "Course with ID "+operation[2]+" is deleted.";
+			else
+				result[0] = "Deletion is not completed. Course with ID: "+operation[2]+" already does not exists";
+			
+		}else{
+			throw new RuntimeException("Parse error!");
+		}
+		
+		FileIO.getInstance().bufferOutput(result);
 	}
 
 	private void printAllCourses() {
 		Course[] courses = InfoStorage.getInstance().getAllCourses();
 		
-		String[] lines = new String[courses.length];
+		String[] result;
 		
-		for(int i = 0; i<courses.length; i++)
-			lines[i] = courses[i].toString();
+		switch (courses.length) {
 		
+		case 0:
+			result = new String[1];
+			result[0] = "There exists no course in system.";
+			break;
+			
+		default:
+			result = new String[courses.length];
+			for(int i = 0; i<courses.length; i++)
+				result[i] = courses[i].toString();
+			break;
+			
+			
+		}
+
 		
-		FileIO.getInstance().write(lines);
+		FileIO.getInstance().bufferOutput(result);
 	}
 
 	private void printAllStudents() {
 		Student[] students = InfoStorage.getInstance().getAllStudents();
 		
-		String[] lines = new String[students.length];
+		String[] result;
 		
-		for(int i = 0; i<students.length; i++)
-			if(students[i] != null)
-				lines[i] = students[i].toString();
+		switch (students.length) {
+		
+		case 0:
+			result = new String[1];
+			result[0] = "There exists no student in system.";
+			break;
+			
+		default:
+			result = new String[students.length];
+			for(int i = 0; i<students.length; i++)
+				result[i] = students[i].toString();
+			break;
+			
+			
+		}
 		
 		
-		FileIO.getInstance().write(lines);
+		FileIO.getInstance().bufferOutput(result);
 		
 	}
 
@@ -157,14 +211,14 @@ public class Controller {
 		
 		if(InfoStorage.getInstance().editCourse(courseID, courseTitle, courseCredit, courseSemester))
 		{
-			String[] lines = new String[1];
-			lines[0] = "Completed.";
+			String[] result = new String[1];
+			result[0] = "Editing course with ID: "+operation[2]+" is Completed.";
 			
-			FileIO.getInstance().write(lines);
+			FileIO.getInstance().bufferOutput(result);
 		}else{
-			String[] lines = new String[1];
-			lines[0] = "Course does not exists";
-			FileIO.getInstance().write(lines);
+			String[] result = new String[1];
+			result[0] = "Editing is not completed. Course with ID: "+operation[2]+" does not exists";
+			FileIO.getInstance().bufferOutput(result);
 		}
 	}
 
@@ -178,14 +232,14 @@ public class Controller {
 		
 		if(InfoStorage.getInstance().editStudent(studentID, studentName, studentSurname))
 		{
-			String[] lines = new String[1];
-			lines[0] = "Completed.";
+			String[] result = new String[1];
+			result[0] = "Editing student with ID: "+operation[2]+" is completed.";
 			
-			FileIO.getInstance().write(lines);
+			FileIO.getInstance().bufferOutput(result);
 		}else{
-			String[] lines = new String[1];
-			lines[0] = "Student does not exists";
-			FileIO.getInstance().write(lines);
+			String[] result = new String[1];
+			result[0] = "Editing is not completed. Student with ID: "+operation[2]+" does not exists";
+			FileIO.getInstance().bufferOutput(result);
 		}
 		
 	}
@@ -197,12 +251,12 @@ public class Controller {
 		String fileName = operation[1];
 		
 		FileIO.setInstance(FileIO.courseData, fileName);
-		InfoStorage.getInstance().updateCourseList();
+		InfoStorage.getInstance().loadCourseList();
 		
-		String[] lines = new String[1];
-		lines[0] = "Completed.";
+		String[] result = new String[1];
+		result[0] = "Course data from selected directory is proccessed into system.";
 		
-		FileIO.getInstance().write(lines);
+		FileIO.getInstance().bufferOutput(result);
 	}
 
 	private void addStudents(String[] operation) {
@@ -212,12 +266,12 @@ public class Controller {
 		String fileName = operation[1];
 		
 		FileIO.setInstance(FileIO.studentData, fileName);
-		InfoStorage.getInstance().updateStudentList();
+		InfoStorage.getInstance().loadStudentList();
 		
-		String[] lines = new String[1];
-		lines[0] = "Completed.";
+		String[] result = new String[1];
+		result[0] = "Student data from selected directory is proccessed into system.";
 		
-		FileIO.getInstance().write(lines);
+		FileIO.getInstance().bufferOutput(result);
 		
 	}
 

@@ -1,16 +1,16 @@
 package utility;
 
 
-class HashListNode<K> {
-	private int key;
+class HashListNode<J,K> {
+	private J key;
 	private K value;
 
-	protected HashListNode(int key, K value) {
+	protected HashListNode(J key, K value) {
 		this.key = key;
 		this.value = value;
 	}
 
-	protected void setKey(int key){
+	protected void setKey(J key){
 		this.key = key;
 	}
 	
@@ -18,7 +18,7 @@ class HashListNode<K> {
 		this.value = value;
 	}
 
-	protected int getKey() {
+	protected J getKey() {
 		return key;
 	}
 

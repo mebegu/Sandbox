@@ -16,6 +16,8 @@ public class FileIO {
 	private static String studentFileName;
 	private static String courseFileName;
 	
+	private ArrayList<String> output;
+	
 	private static FileIO instance;
 	
 	public static FileIO getInstance(){
@@ -45,7 +47,9 @@ public class FileIO {
 	}
 	
 	
-	private FileIO() {}
+	private FileIO() {
+		output = new ArrayList<String>();
+	}
 
 	public String[] read(int operationName) throws FileNotFoundException{
 		ArrayList<String> txt = new ArrayList<String>();   
@@ -84,8 +88,24 @@ public class FileIO {
 			}
 	}
 
-	public void write(String[] lines){
+	public void bufferOutput(String[] lines){
+		System.out.println("-----");
 		for(int i=0; i<lines.length; i++)
 			System.out.println(lines[i]);
+		
+		System.out.println("^^^^^^^^^^^^");
+	}
+	
+	public void bufferOutput(String title, String[] lines){
+		
+		System.out.println("-----");
+		for(int i=0; i<lines.length; i++)
+			System.out.println(lines[i]);
+		
+		System.out.println("^^^^^^^^^^^^");
+	}
+	
+	public void printOutput(){
+		
 	}
 }
